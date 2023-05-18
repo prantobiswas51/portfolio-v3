@@ -1,4 +1,4 @@
-<nav class="bg-white z-[100] border dark:bg-gray-900">
+<nav class="bg-white z-[100] dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" class="flex items-center">
             <img src="" class="h-8 mr-3" alt="Pranto Logo" />

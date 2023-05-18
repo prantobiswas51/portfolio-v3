@@ -4,7 +4,7 @@
     <div class="container my-24 px-6 mx-auto">
 
         <!-- Section: Design Block -->
-        <section class="mb-32 text-gray-800 grid grid-cols-1 md:grid-cols-2">
+        <section class="mb-32 text-gray-800  grid grid-cols-1 md:grid-cols-2">
             <div class="flex flex-wrap">
                 <div class="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
                     <h2 class="text-3xl font-bold mb-6">Contact us</h2>
@@ -27,7 +27,7 @@
 
             </div>
 
-            <div class="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
+            <div class="grow-0 bg-gray-200 p-4 rounded-lg shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-6/12 px-16 lg:px-6">
                 <form>
 
                     <div class="form-group mb-6">

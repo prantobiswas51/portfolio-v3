@@ -23,9 +23,11 @@
 
     <x-partials.header class=""></x-partials.header>
 
-    <main class="">
-        @yield('content')
-    </main>
+    <nav class="bg-white border dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            @yield('content')
+        </div>
+    </nav>
 
     <x-partials.footer class=""></x-partials.footer>
 
