@@ -19,18 +19,17 @@
         * {
             font-family: "Ropa Sans";
         }
+
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+
     </style>
 
-    <x-partials.header></x-partials.header>
-
-    <nav class="bg-white border dark:bg-gray-900">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            @yield('content')
-        </div>
-    </nav>
-
-    <x-partials.footer></x-partials.footer>
-
+    <div class="">
+        @yield('content')
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 
