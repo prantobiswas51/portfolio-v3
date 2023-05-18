@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2aee2ea5d2.js" crossorigin="anonymous"></script>
     <title>Pranto Biswas</title>
 </head>
 
@@ -18,12 +19,11 @@
         * {
             font-family: "Ropa Sans";
         }
-
     </style>
 
     <x-partials.header class=""></x-partials.header>
 
-    <main>
+    <main class="">
         @yield('content')
     </main>
 
