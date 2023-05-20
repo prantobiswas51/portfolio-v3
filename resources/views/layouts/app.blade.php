@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/2aee2ea5d2.js" crossorigin="anonymous"></script>
-    <title>Pranto Biswas</title>
-</head>
 
-<body class="bg-gray-900">
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+
+        } else {
+            document.documentElement.classList.remove('dark')
+
+        }
+    </script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
@@ -21,18 +27,21 @@
         }
     </style>
 
-    <x-partials.header></x-partials.header>
+    <title>Pranto Biswas</title>
+</head>
 
-    <nav class="">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            @yield('content')
-        </div>
-    </nav>
+<body class="dark:bg-slate-950 dark:text-gray-50">
 
-    <x-partials.footer></x-partials.footer>
+    <x-partials.header />
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        @yield('content')
+    </div>
+
+    <x-partials.footer />
+
+
 
 </body>
 
