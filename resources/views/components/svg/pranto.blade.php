@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.16 86.94"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><text transform="translate(0.5 59.38)" style="font-size:70.9926986694336px;fill:#04898c;font-family:Harlow Solid Italic, HarlowSolid">Pranto</text></g></g></svg>

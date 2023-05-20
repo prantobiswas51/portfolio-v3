@@ -11,7 +11,7 @@
     <title>Pranto Biswas</title>
 </head>
 
-<body>
+<body class="bg-gray-900">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
@@ -23,7 +23,7 @@
 
     <x-partials.header></x-partials.header>
 
-    <nav class="bg-white border dark:bg-gray-900">
+    <nav class="">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             @yield('content')
         </div>
