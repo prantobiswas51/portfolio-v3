@@ -3,7 +3,7 @@
 @section('content')
     <div class="container dark:text-gray-50 my-24 px-6 mx-auto">
 
-        <!-- Section: Design Block -->
+        
         <section class="grid grid-cols-1 md:grid-cols-2">
             <div class="flex flex-col justify-between p-8">
 
@@ -62,7 +62,10 @@
                 </div>
             </div>
         </section>
-        <!-- Section: Design Block -->
+        
+        <section>
+            <div></div>
+        </section>
 
     </div>
 @endsection

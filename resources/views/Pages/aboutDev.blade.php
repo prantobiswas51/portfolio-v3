@@ -3,7 +3,6 @@
 @section('content')
     <div class="container my-24 px-6 mx-auto">
 
-        <!-- Section: Design Block -->
         <section class=" mx-auto grid gap-8 grid-cols-1 md:grid-cols-2">
             <div class="flex flex-col text-xl justify-center rounded-lg p-4">
                 <div class="name">Hello</div>
@@ -30,7 +29,40 @@
             </div>
 
         </section>
-        <!-- Section: Design Block -->
+
+        <div class="md:h-40"></div>
+            
+        <section class="">
+            <div class="flex flex-col md:flex-row">
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4">
+                    <p>Languages I Speak</p>
+                    <p>HTML5, CSS3, SCSS, SASS, PHP, Laravel, Vanila JS, Vue.js, React.js, 
+                        Tailwind, Bootstrap</p>
+                </div>
+
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4">
+                    <p>Languages I Speak</p>
+                    <p>HTML5, CSS3, SCSS, SASS, PHP, Laravel, Vanila JS, Vue.js, React.js, 
+                        Tailwind, Bootstrap</p>
+                </div>
+            </div>
+
+            
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4">
+                    <p>Languages I Speak</p>
+                    <p>HTML5, CSS3, SCSS, SASS, PHP, Laravel, Vanila JS, Vue.js, React.js, 
+                        Tailwind, Bootstrap</p>
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4">
+                    <p>Languages I Speak</p>
+                    <p>HTML5, CSS3, SCSS, SASS, PHP, Laravel, Vanila JS, Vue.js, React.js, 
+                        Tailwind, Bootstrap</p>
+                </div>
+            </div>
+
+        </section>
 
     </div>
 @endsection

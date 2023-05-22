@@ -2,12 +2,15 @@
 
 @section('content')
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-2 my-24 px-6 mx-auto">
+<div class="ml-10 text-4xl py-12">
+    <h2>My Working Area</h2>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 mx-auto">
 
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-            <img class="rounded-t-lg" src="{{ asset('images/wireframe.jpg') }}"
-                alt="" />
+            <img class="rounded-t-lg" src="{{ asset('images/wireframe.jpg') }}" alt="" />
         </a>
         <div class="p-5">
             <a href="#">
@@ -53,7 +56,6 @@
             </a>
         </div>
     </div>
-
 
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
