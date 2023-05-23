@@ -18,17 +18,24 @@
                     <p class=" mb-2">Magura, Khulna, Bangladesh</p>
                 </div>
 
-                <div class="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
-                    <a class="mr-2" href=""><i class="fa-solid fa-2xl fa-brands fa-github"></i> </a>
-                    <a class="mr-2" href=""><i class="fa-solid fa-brands fa-2xl fa-facebook"></i> </a>
-                    <a class="mr-2" href=""><i class="fa-solid fa-brands fa-2xl fa-linkedin"></i> </a>
-                    <a class="mr-2" href=""><i class="fa-solid fa-brands fa-2xl fa-youtube"></i> </a>
+                <div class="my-4 flex ml-4">
+                    <div>
+                        <a class="mr-2" href="https://github.com/prantobiswas51"><i class="fa-solid fa-xl fa-brands fa-github"></i> </a>
+                        <a class="mr-2" href="https://www.facebook.com/prantobd320/"><i class="fa-solid fa-brands fa-xl fa-facebook"></i> </a>
+                        <a class="mr-2" href="https://www.linkedin.com/in/prantobd320/"><i class="fa-solid fa-brands fa-xl fa-linkedin"></i> </a>
+                        <a class="mr-2" href="https://www.youtube.com/techland360"><i class="fa-solid fa-brands fa-xl fa-youtube"></i> </a>
+                    </div>
+                    
+                    <div class="flex items-center ">
+                        <a class="mr-2" href="https://www.upwork.com/freelancers/prantobiswasdev"><x-svg.upwork/></a>
+                        <a class="mr-2" href="https://www.fiverr.com/users/sanjoy320"><x-svg.fiverr/></a>
+                    </div>
                 </div>
 
             </div>
 
             <div class="flex justify-center">
-                <div class="grow-0 bg-gray-200 p-4 rounded-lg shrink-0  mb-12 md:mb-0 md:w-6/12 px-16 lg:px-6">
+                <div class="grow-0 bg-gray-200 p-8 rounded-lg shrink-0  mb-12 md:mb-0 md:w-6/12 md:p-16 lg:px-6">
                     <form class="text-gray-900">
     
                         <div class="form-group mb-6">

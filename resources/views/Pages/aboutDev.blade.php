@@ -12,15 +12,23 @@
                     an saint martin lander, who couldn't stay for long
                     time in this island.</div>
 
-                <div class="grow-0 my-4 shrink-0 basis-auto md:mb-0 w-full md:w-6/12 ">
-                    <a class="mr-2" href=""><i class="fa-solid fa-xl fa-brands fa-github"></i> </a>
-                    <a class="mr-2" href=""><i class="fa-solid fa-brands fa-xl fa-facebook"></i> </a>
-                    <a class="mr-2" href=""><i class="fa-solid fa-brands fa-xl fa-linkedin"></i> </a>
-                    <a class="mr-2" href=""><i class="fa-solid fa-brands fa-xl fa-youtube"></i> </a>
+                <div class="my-4 flex">
+                    <div>
+                        <a class="mr-2" href="https://github.com/prantobiswas51"><i class="fa-solid fa-xl fa-brands fa-github"></i> </a>
+                        <a class="mr-2" href="https://www.facebook.com/prantobd320/"><i class="fa-solid fa-brands fa-xl fa-facebook"></i> </a>
+                        <a class="mr-2" href="https://www.linkedin.com/in/prantobd320/"><i class="fa-solid fa-brands fa-xl fa-linkedin"></i> </a>
+                        <a class="mr-2" href="https://www.youtube.com/techland360"><i class="fa-solid fa-brands fa-xl fa-youtube"></i> </a>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <a class="mr-2" href="https://www.upwork.com/freelancers/prantobiswasdev"><x-svg.upwork/></a>
+                        <a class="mr-2" href="https://www.fiverr.com/users/sanjoy320"><x-svg.fiverr/></a>
+                    </div>
+                    
                 </div>
 
                 <div class="">
-                    <x-buttons.primary class="my-4 justify-center">Contact Me</x-buttons>
+                    <a href="mailto:dev.prantobiswas@gmail.com"><x-buttons.primary class="my-4 justify-center">Hire Me</x-buttons></a> 
                 </div>
             </div>
 
