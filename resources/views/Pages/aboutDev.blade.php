@@ -20,7 +20,7 @@
                         <a class="mr-2" href="https://www.youtube.com/techland360"><i class="fa-solid fa-brands fa-xl fa-youtube"></i> </a>
                     </div>
                     
-                    <div class="flex items-center">
+                    <div class="flex items-center dark:fill-white dark:text-white">
                         <a class="mr-2" href="https://www.upwork.com/freelancers/prantobiswasdev"><x-svg.upwork/></a>
                         <a class="mr-2" href="https://www.fiverr.com/users/sanjoy320"><x-svg.fiverr/></a>
                     </div>
@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="">
-                    <a href="mailto:dev.prantobiswas@gmail.com"><x-buttons.primary class="my-4 justify-center">Hire Me</x-buttons></a> 
+                    <a href="mailto:prantobd320@gmail.com"><x-buttons.primary class="my-4 justify-center">Hire Me</x-buttons></a> 
                 </div>
             </div>
 
@@ -42,31 +42,28 @@
             
         <section class="">
             <div class="flex flex-col md:flex-row">
-                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4">
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4 w-full">
                     <p>Languages I Speak</p>
-                    <p>HTML5, CSS3, SCSS, SASS, PHP, Laravel, Vanila JS, Vue.js, React.js, 
-                        Tailwind, Bootstrap</p>
+                    <p>HTML5, CSS3, SCSS, SASS, PHP, Laravel, Vanila JS, Vue.js, jQuery, 
+                        Tailwindcss, Bootstrap</p>
                 </div>
 
-                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4">
-                    <p>Languages I Speak</p>
-                    <p>HTML5, CSS3, SCSS, SASS, PHP, Laravel, Vanila JS, Vue.js, React.js, 
-                        Tailwind, Bootstrap</p>
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4 w-full">
+                    <p>CMS I work on</p>
+                    <p>WordPress, Laravel, Shopify, Webflow</p>
                 </div>
             </div>
 
             
             
             <div class="flex flex-col md:flex-row">
-                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4">
-                    <p>Languages I Speak</p>
-                    <p>HTML5, CSS3, SCSS, SASS, PHP, Laravel, Vanila JS, Vue.js, React.js, 
-                        Tailwind, Bootstrap</p>
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4 w-full">
+                    <p>Profession</p>
+                    <p>Web Designer, Web Developer, Graphic Designer, UI Designer</p>
                 </div>
-                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4">
-                    <p>Languages I Speak</p>
-                    <p>HTML5, CSS3, SCSS, SASS, PHP, Laravel, Vanila JS, Vue.js, React.js, 
-                        Tailwind, Bootstrap</p>
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded-lg m-4 w-full">
+                    <p>Other Skills</p>
+                    <p>Personal Asistant, Graphic Designer, Photo editor, Canva designer, Domain - Hosting expert</p>
                 </div>
             </div>
 

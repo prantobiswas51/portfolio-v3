@@ -8,11 +8,6 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/2aee2ea5d2.js" crossorigin="anonymous"></script>
-    <title>Pranto Biswas</title>
-</head>
-
-<body>
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 
@@ -26,6 +21,14 @@
         }
 
     </style>
+    <title>Pranto Biswas</title>
+</head>
+
+
+
+<body>
+
+    <x-partials.header />
 
     <div class="">
         @yield('content')
