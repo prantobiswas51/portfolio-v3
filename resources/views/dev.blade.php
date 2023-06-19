@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="">
-                    <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Hire Me ></x-buttons></a> 
+                    <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Hire Me</x-buttons></a> 
                 </div>
             </div>
 
@@ -42,13 +42,13 @@
         <section class="text-black dark:text-black">
 
             <div class="flex flex-col md:flex-row">
-                <div class="bg-gray-100 p-4 shadow-lg rounded-lg my-4 md:mx-4 w-full">
+                <div class="bg-gray-100 dark:bg-gray-800 dark:text-gray-50 p-4 shadow-lg border rounded-lg my-4 md:mx-4 w-full">
                     <p class="text-2xl">Languages I Speak</p>
                     <p>HTML5, CSS3, SCSS, SASS, PHP, Laravel, Vanila JS, Vue.js, jQuery, 
                         Tailwindcss, Bootstrap</p>
                 </div>
 
-                <div class="bg-gray-100 p-4 shadow-lg rounded-lg my-4 md:mx-4 w-full">
+                <div class="bg-gray-100 dark:bg-gray-800 dark:text-gray-50 p-4 shadow-lg border rounded-lg my-4 md:mx-4 w-full">
                     <p class="text-2xl">CMS I work on</p>
                     <p>WordPress, Laravel, Shopify, Webflow, Typedream</p>
                 </div>
@@ -57,11 +57,11 @@
             
             
             <div class="flex flex-col md:flex-row">
-                <div class="bg-gray-100 p-4 shadow-lg rounded-lg my-4 md:mx-4 w-full">
+                <div class="bg-gray-100 dark:bg-gray-800 dark:text-gray-50 p-4 shadow-lg border rounded-lg my-4 md:mx-4 w-full">
                     <p class="text-2xl">Profession</p>
                     <p>Web Designer, Web Developer, Graphic Designer, UI Designer</p>
                 </div>
-                <div class="bg-gray-100 p-4 shadow-lg rounded-lg my-4 md:mx-4 w-full">
+                <div class="bg-gray-100 dark:bg-gray-800 dark:text-gray-50 p-4 shadow-lg border rounded-lg my-4 md:mx-4 w-full">
                     <p class="text-2xl">Other Skills</p>
                     <p>Personal Asistant, Graphic Designer, Photo editor, Canva designer, Domain - Hosting expert</p>
                 </div>
