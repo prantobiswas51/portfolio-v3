@@ -20,8 +20,8 @@
                     </div>
                     
                     <div class="flex items-center">
-                        <a class="mr-2" href="https://www.upwork.com/freelancers/prantobiswasdev"><x-svg.upwork/></a>
-                        <a class="mr-2" href="https://www.fiverr.com/users/sanjoy320"><x-svg.fiverr/></a>
+                        <a class="mr-2" href="https://www.upwork.com/freelancers/prantobiswasdev"><x-upwork/></a>
+                        <a class="mr-2" href="https://www.fiverr.com/users/sanjoy320"><x-fiverr/></a>
                     </div>
                     
                 </div>

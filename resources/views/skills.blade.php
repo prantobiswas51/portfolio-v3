@@ -14,6 +14,7 @@
             <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Graphic Design</h5>
             </a>
+            <p class="date">25 Feb 2023</p>
             <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise
                 technology
                 acquisitions of 2021 so far, in reverse chronological order.</p>
@@ -38,6 +39,7 @@
             <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Wireframe Design</h5>
             </a>
+            <p class="date">25 Feb 2023</p>
             <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise
                 technology
                 acquisitions of 2021 so far, in reverse chronological order.</p>
@@ -63,6 +65,7 @@
             <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Frontend Development</h5>
             </a>
+            <p class="date">25 Feb 2023</p>
             <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise
                 technology
                 acquisitions of 2021 so far, in reverse chronological order.</p>
@@ -88,6 +91,7 @@
             <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Backend Development</h5>
             </a>
+            <p class="date">25 Feb 2023</p>
             <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise
                 technology
                 acquisitions of 2021 so far, in reverse chronological order.</p>
@@ -112,6 +116,7 @@
             <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">WordPress Development</h5>
             </a>
+            <p class="date">25 Feb 2023</p>
             <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise
                 technology
                 acquisitions of 2021 so far, in reverse chronological order.</p>
