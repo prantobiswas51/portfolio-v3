@@ -1,45 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>{{ config('app.name', 'Laravel') }}</title>
+        <script src="https://kit.fontawesome.com/2aee2ea5d2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/x-icon" href="/images/fevicon.png">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="https://kit.fontawesome.com/2aee2ea5d2.js" crossorigin="anonymous"></script>
-    <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 
-        } else {
-            document.documentElement.classList.remove('dark')
+        </style>
+    </head>
+    <body class="">
+        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+            @include('layouts.navigation')
 
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+            <!-- Page Heading -->
+            @if (isset($header))
+                <header class="bg-white dark:bg-gray-800 shadow">
+                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                        {{ $header }}
+                    </div>
+                </header>
+            @endif
 
-        * {
-            font-family: "Ropa Sans";
-        }
-    </style>
-    <title>Pranto Biswas</title>
-</head>
-
-<body class="dark:bg-slate-950 dark:text-gray-50">
-
-    <x-partials.header />
-
-    <div class="max-w-screen-xl  items-center justify-between mx-auto p-4">
-        @yield('content')
-    </div>
-
-    <x-partials.footer />
-
-
-
-</body>
-
+            <!-- Page Content -->
+            <main class="max-w-7xl mx-auto text-black dark:text-white">
+                {{ $slot }}
+            </main>
+        </div>
+    </body>
 </html>

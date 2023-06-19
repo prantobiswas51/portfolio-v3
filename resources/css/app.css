@@ -3,19 +3,8 @@
 @tailwind utilities;
 
 
-
-@font-face {
-    font-family: 'Harlow Solid Italic';
-    src: url('/font/Harlow/harlow-solid.eot');
-
-    src: local('Harlow Solid Italic'),
-        url('/font/Harlow/harlow-solid.eot') format('embedded-opentype'),
-        url('/font/Harlow/harlow-solid.woff2') format('woff2'),
-        url('/font/Harlow/harlow-solid.woff') format('woff'),
-        url('/font/Harlow/harlow-solid.ttf') format('truetype'),
-        url('/font/Harlow/harlow-solid.svg#HarlowSolidItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
+*{
+    font-family: 'Ropa Sans', sans-serif;
 }
 
 .floating{
@@ -34,4 +23,11 @@
 	100% {
 		transform: translatey(0px);
 	}
+}
+
+@font-face {
+    font-family: 'Harlow';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../font/Harlow/harlow-solid.woff'), url("../../font/Harlow/harlow-solid.woff2");
 }

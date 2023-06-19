@@ -1,1 +1,0 @@
-<input {{$attributes->merge(['class'=>'border p-2 mt-2 mb-2'])}}>
