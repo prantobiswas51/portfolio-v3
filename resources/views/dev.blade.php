@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="">
-                    <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Hire Me</x-buttons></a> 
+                    <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Hire Me > </x-buttons></a> 
                 </div>
             </div>
 
