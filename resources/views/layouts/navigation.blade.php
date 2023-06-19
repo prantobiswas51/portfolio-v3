@@ -160,7 +160,10 @@
         </div>
 
         <!-- Responsive Settings Options -->
+
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
+            @if (!Auth::guest())
+
             <div class="px-4">
                 <div class="font-medium text-base text-gray-800 dark:text-gray-200"></div>
                 <div class="font-medium text-sm text-gray-500"></div>
@@ -186,6 +189,15 @@
                     </x-responsive-nav-link>
                 </form>
             </div>
+
+            @else
+            <x-responsive-nav-link :href="route('login')">
+                {{ __('Login') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('register')">
+                {{ __('Register') }}
+            </x-responsive-nav-link>
+            @endif
         </div>
     </div>
 </nav>
