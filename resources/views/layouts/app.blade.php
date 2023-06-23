@@ -24,8 +24,8 @@
     </script>
 </head>
 
-<body class="">
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+<body class="bg-gray-100 dark:bg-gray-900">
+    <div class=" bg-gray-100 dark:bg-gray-900">
         @include('layouts.navigation')
 
         <!-- Page Heading -->
@@ -41,7 +41,9 @@
         <main class="max-w-7xl mx-auto text-black dark:text-white">
             {{ $slot }}
         </main>
+
+        
+        @include('layouts.footer')
     </div>
 </body>
-
 </html>

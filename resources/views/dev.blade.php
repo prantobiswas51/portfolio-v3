@@ -1,8 +1,8 @@
 <x-app-layout>
     
-    <div class="container my-24 px-6 mx-auto text-black dark:text-white">
+    <div class="container py-24 px-6 mx-auto text-black dark:text-white">
 
-        <section class=" mx-auto grid gap-8 grid-cols-1 md:grid-cols-2">
+        <section class="mx-auto grid gap-8 grid-cols-1 md:grid-cols-2">
             <div class="flex flex-col text-xl justify-center rounded-lg p-4">
                 <div class="name">Hello</div>
                 <div class="name flex"> <h1>I am </h1><h1 class="text-2xl font-harlow px-4"> Pranto Biswas </h1></div>
@@ -28,10 +28,11 @@
 
                 <div class="">
                     <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Hire Me</x-buttons></a> 
+                    <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Check Skills</x-buttons></a> 
                 </div>
             </div>
 
-            <div class="p-4 flex md:p-0 content-center self-center align-baseline rounded-lg  md:px-16">
+            <div class="p-4 flex md:p-0 content-center self-center align-baseline rounded-lg  sm:px-16">
                 <img class="avatar mx-auto floating" src="{{ asset('images/pranto.png') }}" alt="Pranto">            
             </div>
 

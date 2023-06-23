@@ -3,7 +3,7 @@
     <h2>My Working Area</h2>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 mx-auto">
+<div class="grid pb-24 grid-cols-1 md:grid-cols-3 gap-4 px-6 mx-auto">
 
 
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
@@ -108,7 +108,7 @@
         </div>
     </div>
 
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+    <div class="max-w-sm bg-white border  border-gray-200 rounded-lg shadow">
         <a href="#">
             <img class="rounded-t-lg" src="{{ asset('images/wp.png') }}" alt="WordPress" />
         </a>

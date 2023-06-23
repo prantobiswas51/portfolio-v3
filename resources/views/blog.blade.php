@@ -7,7 +7,7 @@
         </form>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 my-24 px-6 mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-24 px-6 mx-auto">
 
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
             <a href="#">
