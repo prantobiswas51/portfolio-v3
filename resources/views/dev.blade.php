@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <div class="p-4 flex md:p-0 content-center self-center align-baseline rounded-lg  sm:px-16">
+            <div class="p-4 flex md:p-0 content-center z-0 self-center align-baseline rounded-lg  sm:px-16">
                 <img class="avatar mx-auto floating" src="{{ asset('images/pranto.png') }}" alt="Pranto">            
             </div>
 

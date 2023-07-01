@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminPostController;
 
 
 Route::get('/', function () {
@@ -24,9 +25,12 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth','sudhuadminallowed'])->group(function () {
-    Route::get('/admin-dash', function(){
-        return view('admin.dashboard');
-    })->name('admin');
+    Route::get('/admin', function(){return view('admin.dashboard');})->name('admin');
+
+    Route::get('/admin/post/create', [AdminPostController::class, 'create'])->name('addpost');
+    Route::get('/admin/post/view', [AdminPostController::class, 'view'])->name('viewpost');
+    
 });
 
 require __DIR__.'/auth.php';
+

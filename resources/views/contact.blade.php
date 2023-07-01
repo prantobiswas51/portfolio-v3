@@ -63,9 +63,9 @@
                 </div>
 
                 <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
-                    <div class="relative rounded-lg bg-gray-100 p-8 shadow-lg sm:p-12 dark:text-black text-white">
-                        <div class="text-4xl mb-4 text-center">Contact Form</div>
-                        <form>
+                    <div class="relative border rounded-lg bg-gray-100 dark:bg-gray-800 p-8 shadow-lg sm:p-12 dark:text-black text-white">
+                        <div class="text-4xl mb-4 text-center text-black dark:text-gray-50">Contact Form</div>
+                        <form >
                             <div class="mb-6">
                                 <input type="text" placeholder="Your Name"
                                     class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" />
@@ -84,7 +84,7 @@
                             </div>
                             <div>
                                 <button type="submit"
-                                    class="bg-primary border-primary w-full rounded border bg-gray-200 p-3 transition ">
+                                    class="bg-primary border-primary w-full rounded border text-black bg-gray-200 p-3 transition ">
                                     Send Message
                                 </button>
                             </div>

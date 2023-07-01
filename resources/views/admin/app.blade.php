@@ -29,22 +29,20 @@
     <div class=" bg-gray-100 dark:bg-gray-900">
         @include('layouts.navigation')
 
-        <!-- Page Heading -->
-        @if (isset($header))
-            <header class="bg-white dark:bg-gray-800 shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-        @endif
-
         <!-- Page Content -->
-        <main class="max-w-7xl mt-[65px] mx-auto text-black dark:text-white">
-            {{ $slot }}
-        </main>
+        <section class="flex mt-16 flex-col md:flex-row md:w-[80%] mx-auto">
 
-        
-        @include('layouts.footer')
+            <div class="basis-1/4 h-screen text-white hover:text-black p-4 flex flex-col ">
+                @include('admin.sidebar')
+            </div>
+    
+            <div class="basis-3/4 p-4 text-gray-900 dark:text-gray-50">
+    
+                {{ $slot }}
+    
+            </div>
+    
+        </section>
     </div>
     
 </body>
