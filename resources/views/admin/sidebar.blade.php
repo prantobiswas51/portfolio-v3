@@ -28,7 +28,7 @@
             </li>
             <li>
                 <a class="flex items-center p-2 text-base transition duration-75 rounded-lg pl-11 group hover:bg-gray-800 border border-dashed"
-                    href="/admin/posts/categories/manage">Categories</a>
+                    href="{{ route('category') }}">Categories</a>
             </li>
         </ul>
     </li>

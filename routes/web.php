@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminPostController;
-
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,6 +29,9 @@ Route::middleware(['auth','sudhuadminallowed'])->group(function () {
 
     Route::get('/admin/post/create', [AdminPostController::class, 'create'])->name('addpost');
     Route::get('/admin/post/view', [AdminPostController::class, 'view'])->name('viewpost');
+
+    Route::get('/admin/categories/view', [CategoryController::class, 'view'])->name('category');
+    Route::post('/admin/categories/saveCat', [CategoryController::class, 'saveCat'])->name('saveCat');
     
 });
 

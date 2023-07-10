@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->string('catName');
+            $table->string('catSlug');
+            $table->string('catMessage');
+            $table->string('catImageUrl');
             $table->timestamps();
         });
     }

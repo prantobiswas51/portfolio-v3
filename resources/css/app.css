@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 
-*{
-    font-family: 'Ropa Sans', sans-serif;
+* {
+	font-family: 'Ropa Sans', sans-serif;
 }
 
-.floating{
-    align-self: center;
-    transform: translatey(0px);
+.floating {
+	align-self: center;
+	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
 }
 
@@ -17,17 +17,44 @@
 	0% {
 		transform: translatey(0px);
 	}
+
 	50% {
 		transform: translatey(-20px);
 	}
+
 	100% {
 		transform: translatey(0px);
 	}
 }
 
 @font-face {
-    font-family: 'Harlow';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../../font/Harlow/harlow-solid.woff'), url("../../font/Harlow/harlow-solid.woff2");
+	font-family: 'Harlow';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../font/Harlow/harlow-solid.woff'), url("../../font/Harlow/harlow-solid.woff2");
+}
+
+.croppie-container .cr-boundary {
+	border-radius: 10px;
+}
+
+.modal-content {
+	background-color: rgb(68, 68, 68);
+}
+
+.info-container-modal {
+	margin: 20px;
+}
+
+.croppie-container {
+	height: auto;
+}
+
+.input[type=file] {
+	border-radius: 10px;
+}
+
+
+input[type="file"] {
+	display: none;
 }
