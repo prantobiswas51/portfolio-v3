@@ -28,6 +28,7 @@ Route::middleware(['auth','sudhuadminallowed'])->group(function () {
     Route::get('/admin', function(){return view('admin.dashboard');})->name('admin');
 
     Route::get('/admin/post/create', [AdminPostController::class, 'create'])->name('addpost');
+    Route::post('/admin/post/create', [AdminPostController::class, 'save'])->name('savepost');
     Route::get('/admin/post/view', [AdminPostController::class, 'view'])->name('viewpost');
 
     Route::get('/admin/categories/view', [CategoryController::class, 'view'])->name('category');
