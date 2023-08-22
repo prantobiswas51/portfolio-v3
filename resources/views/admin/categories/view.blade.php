@@ -18,8 +18,8 @@
 
                 <div class="mb-6">
                     <label for="catSlug" class="block mb-2 text-sm font-medium">Slug</label>
-                    <input type="text" required name="catSlug" id="catSlug"
-                        class="shadow-sm  border text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
+                    <input type="text"  required name="catSlug" id="catSlug"
+                        class="shadow-sm lowercase border text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
                         placeholder="How to get a car loan?">
                 </div>
 
@@ -40,7 +40,7 @@
                         </label>
 
                         <button type="submit"
-                            class="text-white mt-4 my-2 bg-red-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Remove</button>
+                            class="text-white mt-4 my-2 bg-red-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 ml-2 py-2 text-center">Remove</button>
 
 
                     </div>
@@ -70,10 +70,11 @@
             @foreach ($categories as $category)
                 <div class="shadow-md rounded bg-gray-700 flex mb-2">
                     <div class="img">
-                        <img src="{{ asset('storage/admin/categories/' . $category->catImageUrl) }}" class="max-w-[88px] rounded max-h-[88px]" alt="Cat">
+                        <img src="{{ asset('storage/admin/categories/' . $category->catImageUrl) }}"
+                            class="max-w-[88px] rounded max-h-[88px]" alt="Cat">
                     </div>
 
-                    <div class="des p-2 flex justify-between self-center pl-4">
+                    <div class="des p-2 w-full flex justify-between self-center pl-4">
                         <div class="flex flex-col">
                             <span>{{ $category->catName }}</span>
                             <span class="">{{ $category->catSlug }}</span>
@@ -82,7 +83,9 @@
                             <a href=""><button type="submit"
                                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3">Edit</button></a>
                             <a href=""><button type="submit"
-                                    class="text-white bg-yellow-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3">View</button></a>
+                                    class="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3">View</button></a>
+                            <a href=""><button type="submit"
+                                    class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3">Delete</button></a>
                         </div>
                     </div>
                 </div>
@@ -130,7 +133,7 @@
 
             var formData = {
                 catName: $("#catName").val(),
-                catSlug: $("#catName").val(),
+                catSlug: $("#catName").val().replace(/\s+/g, '-').toLowerCase(),
                 catMessage: $("#catName").val(),
             };
 
@@ -143,7 +146,8 @@
                     },
                     function(data, status) {
                         if (status == "success") {
-                            document.getElementById('toast-success').innerHTML = "Category Created Succesfully"
+                            document.getElementById('toast-success').innerHTML =
+                                "Category Created Succesfully"
                         }
                     });
 
@@ -155,5 +159,5 @@
         ev.preventDefault()
     });
 
-
+    
 </script>
