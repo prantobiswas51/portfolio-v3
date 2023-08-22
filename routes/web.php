@@ -36,5 +36,7 @@ Route::middleware(['auth','sudhuadminallowed'])->group(function () {
     
 });
 
+
+
 require __DIR__.'/auth.php';
 
