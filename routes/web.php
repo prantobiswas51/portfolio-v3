@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,7 +14,9 @@ Route::get('/dashboard', function () {return view('dashboard');})->middleware(['
 
 
 Route::get('/', function(){return view('dev');})->name('dev');
-Route::get('/blog', function(){return view('blog');})->name('blog');
+
+Route::get('/blog', [PostController::class, 'index'])->name('blog');
+
 Route::get('/shop', function(){return view('shop');})->name('shop');
 Route::get('/skills', function(){return view('skills');})->name('skills');
 Route::get('/contact', function(){return view('contact');})->name('contact');

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('postTitle');
             $table->text('postDes');
             $table->string('postStatus');
+            $table->string('postImg');
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@
 
                 <div class="mb-6">
                     <label for="catSlug" class="block mb-2 text-sm font-medium">Slug</label>
-                    <input type="text"  required name="catSlug" id="catSlug"
+                    <input type="text" required name="catSlug" id="catSlug"
                         class="shadow-sm lowercase border text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
                         placeholder="How to get a car loan?">
                 </div>
@@ -65,7 +65,20 @@
 
         {{-- Right side / view cat side  --}}
         <div class=" basis-1/2 ml-2">
-            <h2 class="pb-2 text-2xl">List of Categories</h2>
+            <div class="flex justify-between">
+                <h2 class="pb-2 text-2xl">List of Categories</h2> <a href=""
+                    class="p-2 border rounded-md px-3">Refresh</a>
+            </div>
+
+            <a href=""><button type="submit"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center ml-0 m-1 p-3 py-2">Select
+                    Multiple</button></a>
+            <a href=""><button type="submit"
+                    class="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3 py-2">Export</button></a>
+            <a href=""><button type="submit"
+                    class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3 py-2">Delete</button></a>
+
+            <hr class="my-2">
 
             @foreach ($categories as $category)
                 <div class="shadow-md rounded bg-gray-700 flex mb-2">
@@ -79,18 +92,24 @@
                             <span>{{ $category->catName }}</span>
                             <span class="">{{ $category->catSlug }}</span>
                         </div>
-                        <div class="flex ml-4 text-right">
+                        <div class="flex ml-4 text-right items-center">
                             <a href=""><button type="submit"
-                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3">Edit</button></a>
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3 py-2">Edit</button></a>
+
                             <a href=""><button type="submit"
-                                    class="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3">View</button></a>
-                            <a href=""><button type="submit"
-                                    class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3">Delete</button></a>
+                                    class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3 py-2">Delete</button></a>
+
+                            <a href="" class="hidden"><input class="align-center" type="checkbox" name=""
+                                    id=""></a>
+
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
+
+
+
     </div>
 </x-admin-layout>
 
@@ -158,6 +177,4 @@
 
         ev.preventDefault()
     });
-
-    
 </script>

@@ -10,13 +10,12 @@ class AdminPostController extends Controller
 {
     public function create(){
         $categories =  Category::get();
-        return view('admin.posts.create',compact('categories'));
+        return view('admin.posts.create', compact('categories'));
     }
 
     public function view(){
-
-        return Post::with('categories')->get();
-        return view('admin.posts.view');
+       $posts = Post::with('categories')->get();
+       return view('admin.posts.view', compact('posts'));
     }
 
     public function edit(){
