@@ -13,7 +13,7 @@
                 
                 <a href="">
                     <div class=" aspect-w-16 aspect-h-9 ">
-                        <img src="/storage/admin/posts/{{ $post->postImg }}" alt="Post Image" class="w-full h-full object-cover">
+                        <img src="https://itsourov.com/images/fallback.png" alt="" class="w-full h-full object-cover">
                     </div>
                 </a>
 

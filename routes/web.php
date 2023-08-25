@@ -15,6 +15,8 @@ Route::get('/dashboard', function () {return view('dashboard');})->middleware(['
 
 Route::get('/', function(){return view('dev');})->name('dev');
 
+Route::get('/adminseeuser', function(){return view('admin.users.view');})->name('adminSeeUser');
+
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
 
 Route::get('/shop', function(){return view('shop');})->name('shop');

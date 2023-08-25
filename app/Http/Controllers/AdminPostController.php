@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminPostController extends Controller
 {
@@ -27,10 +28,16 @@ class AdminPostController extends Controller
     }
 
     public function save(Request $request){
-   
-        $validated =$request->validate([
-            'postTitle' => ['required', 'string', 'max:255'],
         
+        $image = $request->postImage;  // your base64 encoded
+        $image = str_replace('data:image/png;base64,', '', $image);
+        $image = str_replace(' ', '+', $image);
+        $imageName = time().'.'.'png';
+        Storage::disk('postimages')->put($imageName, base64_decode($image));
+
+   
+        $validated = $request->validate([
+            'postTitle' => ['required', 'string', 'max:255'],
             'postDes' => 'required',
             'categories' => 'required',
         ]);
@@ -38,9 +45,11 @@ class AdminPostController extends Controller
        $post = Post::create([
             'postTitle'=>$request->postTitle,
             'postDes'=>$request->postDes,
+            'postImg'=> $imageName,
             'user_id'=>auth()->user()->id,
             'postStatus'=>'bllla',
         ]);
+
         $post->categories()->sync($request->categories);
         return back()->with('message','success');
     }
