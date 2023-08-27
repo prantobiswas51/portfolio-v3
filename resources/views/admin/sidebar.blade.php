@@ -17,9 +17,10 @@
 
     {{-- Posts  --}}
     <li>
-        <button type="button"
-            class="bg-gray-100 dark:bg-gray-700 w-full flex items-center p-2 text-base text-gray-600 rounded-lg hover:bg-gray-100 group dark:text-gray-300 dark:hover:bg-gray-700 border dark:border-gray-700"
-            aria-controls="612040022" data-collapse-toggle="612040022" aria-expanded="false">
+        
+        <button type="button" class="w-full flex items-center p-2 text-base text-gray-600 rounded-lg hover:bg-gray-100 group dark:text-gray-300 dark:hover:bg-gray-700 border dark:border-gray-700"
+            aria-controls="612040022" data-collapse-toggle="612040022" >
+
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -27,8 +28,7 @@
                 </path>
             </svg>
             <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item="">Posts</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
             </svg>
         </button>
@@ -42,7 +42,7 @@
                     href="{{ route('addpost') }}">Add new Posts</a>
             </li>
             <li>
-                <a class="bg-gray-100 dark:bg-gray-700 flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 border border-dashed dark:border-gray-700"
+                <a class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 border border-dashed dark:border-gray-700"
                     href="{{ route('category') }}">Categories</a>
             </li>
         </ul>
@@ -50,15 +50,17 @@
 
     {{-- Products --}}
     <li>
-        <button type="button"
-            class="w-full flex items-center p-2 text-base text-gray-600 rounded-lg hover:bg-gray-100 group dark:text-gray-300 dark:hover:bg-gray-700 border dark:border-gray-700"
+
+        <button type="button" class="w-full flex items-center p-2 text-base text-gray-600 rounded-lg hover:bg-gray-100 group dark:text-gray-300 dark:hover:bg-gray-700 border dark:border-gray-700"
             aria-controls="1656928922" data-collapse-toggle="1656928922">
+
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z">
                 </path>
             </svg>
+
             <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item="">Products</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -69,11 +71,11 @@
         <ul id="1656928922" class="hidden py-2 space-y-2">
             <li>
                 <a class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 border border-dashed dark:border-gray-700"
-                    href="">View all Products</a>
+                    href="{{ route('viewProduct') }}">View all Products</a>
             </li>
             <li>
                 <a class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 border border-dashed dark:border-gray-700"
-                    href="">Add new Product</a>
+                    href="{{ route('addProduct') }}">Add new Product</a>
             </li>
             <li>
                 <a class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 border border-dashed dark:border-gray-700"

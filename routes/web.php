@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,7 +20,7 @@ Route::get('/adminseeuser', function(){return view('admin.users.view');})->name(
 
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
 
-Route::get('/shop', function(){return view('shop');})->name('shop');
+Route::get('/shop', [ProductController::class, 'shop'])->name('shop');
 Route::get('/skills', function(){return view('skills');})->name('skills');
 Route::get('/contact', function(){return view('contact');})->name('contact');
 
@@ -38,6 +39,10 @@ Route::middleware(['auth','sudhuadminallowed'])->group(function () {
 
     Route::get('/admin/categories/view', [CategoryController::class, 'view'])->name('category');
     Route::post('/admin/categories/saveCat', [CategoryController::class, 'saveCat'])->name('saveCat');
+
+    Route::get('/admin/product/create', [ProductController::class, 'create'])->name('addProduct');
+    Route::get('/admin/product/view', [ProductController::class, 'index'])->name('viewProduct');
+    Route::post('/admin/product/save', [ProductController::class, 'save'])->name('saveProduct');
     
 });
 

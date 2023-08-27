@@ -8,7 +8,7 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-5">
-        @foreach ($posts as $post)
+        @foreach ($products as $product)
             <div class="border p-2 rounded bg-white dark:bg-gray-800 dark:border-none shadow-sm  px-0 py-0 overflow-hidden">
                 
                 <a href="">
@@ -19,7 +19,7 @@
 
                 <div class="p-3 grid gap-3">
                     <a href="">
-                        <h2 class="text-lg font-medium line-clamp-2">{{ $post->postTitle }}</h2>
+                        <h2 class="text-lg font-medium line-clamp-2">{{ $product->productTitle }}</h2>
                     </a>
                     <div class="ml-auto">
                         <a href="/blog">
