@@ -18,7 +18,7 @@ Route::get('/', function(){return view('dev');})->name('dev');
 
 Route::get('/adminseeuser', function(){return view('admin.users.view');})->name('adminSeeUser');
 
-Route::get('/blog', [PostController::class, 'index'])->name('blog');
+Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::get('/shop', [ProductController::class, 'shop'])->name('shop');
 
 Route::get('/skills', [CategoryController::class, 'skills'])->name('skills');
@@ -35,9 +35,11 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth','sudhuadminallowed'])->group(function () {
     Route::get('/admin', function(){return view('admin.dashboard');})->name('admin');
 
-    Route::get('/admin/post/create', [AdminPostController::class, 'create'])->name('addpost');
-    Route::post('/admin/post/create', [AdminPostController::class, 'save'])->name('savepost');
-    Route::get('/admin/post/view', [AdminPostController::class, 'view'])->name('viewpost');
+    Route::get('/admin/posts/create', [AdminPostController::class, 'create'])->name('addpost');
+    Route::post('/admin/posts/create', [AdminPostController::class, 'save'])->name('savepost');
+    Route::get('/admin/posts/view', [AdminPostController::class, 'view'])->name('viewpost');
+    Route::get('/admin/posts/view/{id}', [AdminPostController::class, 'deletePost'])->name('deletePost');
+
 
     Route::get('/admin/categories/view', [CategoryController::class, 'view'])->name('category');
     Route::post('/admin/categories/saveCat', [CategoryController::class, 'saveCat'])->name('saveCat');

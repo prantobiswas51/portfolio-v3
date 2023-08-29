@@ -1,9 +1,9 @@
 <x-app-layout>
     
-    <section class="container mx-auto px-2 my-5">
+    <section class="">
         <!-- This example requires Tailwind CSS v2.0+ -->
         <nav class="" aria-label="Breadcrumb">
-            <ol role="list" class="bg-white dark:bg-gray-800 rounded-md shadow px-5 flex space-x-4">
+            <ol role="list" class="bg-white dark:bg-gray-800 rounded-md shadow px-8 flex space-x-4">
 
                 <li class="flex">
                     <div class="flex items-center">
@@ -58,17 +58,17 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-2 my-2 px-6 mx-auto">
 
         @foreach ($posts as $post)
-            <div class="max-w-sm mb-5 bg-white border border-gray-200 rounded-lg shadow">
+            <div class="max-w-sm mb-5 bg-gray-800 text-white border-gray-800 rounded-lg shadow">
                 <a href="#">
-                    <img class="rounded-t-lg bg-gray-500" src="{{ $post->id }}" alt="Featured Image" />
+                    <img class="rounded-t-lg bg-gray-500" src="/storage/admin/posts/{{ $post->postImg }}" alt="Featured Image" />
                 </a>
                 <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $post->postTitle }}</h5>
+                    <a href="/post/{{ $post->id }}">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight ">{{ $post->postTitle }}</h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700" maxlength="30"> {{ Str::limit($post->postDes, 80) }}</p>
+                    <p class="mb-3 font-normal " maxlength="30"> {{ Str::limit($post->postDes, 80) }}</p>
                     <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                         Read more
                         <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">

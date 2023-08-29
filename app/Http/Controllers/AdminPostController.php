@@ -23,8 +23,10 @@ class AdminPostController extends Controller
         return "Edit post";
     }
 
-    public function delete(){
-        return "Delete post";
+    public function deletePost($id){
+        $posts = Post::find($id);
+        $posts->delete();
+        return redirect('/admin/posts/view/')->with('Status',"Post Deleted Successfully");
     }
 
     public function save(Request $request){

@@ -21,8 +21,8 @@
                         {{ __('Dev') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('blog')">
-                        {{ __('Blog') }}
+                    <x-nav-link :href="route('posts')">
+                        {{ __('Posts') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('skills')">
@@ -149,8 +149,8 @@
                 {{ __('Dev') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link :href="route('blog')">
-                {{ __('Blog') }}
+            <x-responsive-nav-link :href="route('posts')">
+                {{ __('Posts') }}
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('skills')">
