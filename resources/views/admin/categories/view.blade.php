@@ -30,7 +30,7 @@
                         placeholder="To get your car loan you need to feel this ....."></textarea>
                 </div>
 
-                <div class="mb-6 flex flex-col sm:flex-row">
+                <div class="mb-6 flex flex-col sm:flex-row justify-between">
                     <div class="left">
                         <label for="image" class="block mb-2 text-sm font-medium">Image</label>
 
@@ -84,7 +84,7 @@
                 <div class="shadow-md rounded bg-gray-700 flex mb-2">
                     <div class="img">
                         <img src="{{ asset('storage/admin/categories/' . $category->catImageUrl) }}"
-                            class="max-w-[88px] rounded max-h-[88px]" alt="Cat">
+                            class="max-w-[115px] rounded max-h-[88px]" alt="Cat">
                     </div>
 
                     <div class="des p-2 w-full flex justify-between self-center pl-4">
@@ -96,7 +96,7 @@
                             <a href=""><button type="submit"
                                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3 py-2">Edit</button></a>
 
-                            <a href=""><button type="submit"
+                            <a href="/admin/categories/view/{{ $category->id }}"><button type="submit"
                                     class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center m-1 p-3 py-2">Delete</button></a>
 
                             <a href="" class="hidden"><input class="align-center" type="checkbox" name=""
@@ -119,13 +119,13 @@
         enableExif: true,
         enableOrientation: true,
         viewport: {
-            width: 88,
-            height: 88,
+            width: 303,
+            height: 170,
             type: 'squire' //circle
         },
         boundary: {
-            width: 120,
-            height: 120
+            width: 320,
+            height: 190
         }
     });
 
@@ -152,8 +152,8 @@
 
             var formData = {
                 catName: $("#catName").val(),
-                catSlug: $("#catName").val().replace(/\s+/g, '-').toLowerCase(),
-                catMessage: $("#catName").val(),
+                catSlug: $("#catSlug").val().replace(/\s+/g, '-').toLowerCase(),
+                catMessage: $("#catMessage").val(),
             };
 
             if (img != null && catName != null && catSlug != null && catMessage != null) {

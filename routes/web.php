@@ -19,9 +19,11 @@ Route::get('/', function(){return view('dev');})->name('dev');
 Route::get('/adminseeuser', function(){return view('admin.users.view');})->name('adminSeeUser');
 
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
-
 Route::get('/shop', [ProductController::class, 'shop'])->name('shop');
-Route::get('/skills', function(){return view('skills');})->name('skills');
+
+Route::get('/skills', [CategoryController::class, 'skills'])->name('skills');
+Route::get('/skills/{id}', [CategoryController::class, 'viewSkillProject'])->name('viewSkillProject');
+
 Route::get('/contact', function(){return view('contact');})->name('contact');
 
 Route::middleware('auth')->group(function () {
@@ -39,6 +41,7 @@ Route::middleware(['auth','sudhuadminallowed'])->group(function () {
 
     Route::get('/admin/categories/view', [CategoryController::class, 'view'])->name('category');
     Route::post('/admin/categories/saveCat', [CategoryController::class, 'saveCat'])->name('saveCat');
+    Route::get('/admin/categories/view/{id}', [CategoryController::class, 'deleteCat'])->name('deleteCat');
 
     Route::get('/admin/product/create', [ProductController::class, 'create'])->name('addProduct');
     Route::get('/admin/product/view', [ProductController::class, 'index'])->name('viewProduct');

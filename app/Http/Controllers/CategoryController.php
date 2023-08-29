@@ -36,4 +36,22 @@ class CategoryController extends Controller
             'catImageUrl' =>  $imageName
         ]);
     }
+
+    public function skills(){
+        $categories = Category::all();
+
+        return view('skills', [
+            'categories' => $categories,
+        ]);
+    }
+
+    public function viewSkillProject(Category $id){
+        return $id;
+    }
+
+    public function deleteCat($id){
+        $categories = Category::find($id);
+        $categories->delete();
+        return redirect('/admin/categories/view/')->with('Status',"Data Deleted Successfully");
+    }
 }
