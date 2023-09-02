@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+
+
 <div class="w-full min-h-screen bg-gray-900/50 backdrop-blur hidden justify-center items-center fixed z-50"
     id="popContainer">
     <div class="sub-container p-4 max-w-[700px]">
@@ -27,17 +30,29 @@
     </div>
 </div>
 
+<style>
+    .tox-silver-sink{
+        display: none !important;
+    }
+
+    .tox-tinymce{
+        border-radius: 10px;
+    }
+
+</style>
+
 <x-admin-layout>
 
     @if ($errors->any())
         {!! implode('', $errors->all('<div>:message</div>')) !!}
     @endif
 
-    <form class=" py-10 px-10 rounded-lg bg-gray-200 dark:bg-gray-800" action="{{ route('savepost') }}" method="POST">
+    <form class=" py-10 px-10 rounded-lg h-auto bg-gray-200 dark:bg-gray-800" action="{{ route('savepost') }}" method="POST">
         @csrf
         <h2 class="p-2 text-4xl text-center">Create New Post</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 mt-5">
+
             <div class="lg:col-span-2">
 
                 <div class="mb-6">
@@ -49,10 +64,10 @@
 
                 <div class="mb-6">
                     <label for="email" class="block mb-2 text-sm font-medium ">Description</label>
-                    <textarea id="message" rows="4" name="postDes"
-                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="To get your car loan you need to feel this ....."></textarea>
+                    <x-tinymce-editor/>
                 </div>
+
+                
 
             </div>
 
@@ -75,7 +90,8 @@
                 <div class="pr-2 w-full mb-6">
 
                     <label for="featured_div"
-                        class="overflow-hidden max-w-lg  block mb-2 text-sm font-medium text-gray-900 dark:text-white">Featured Image</label>
+                        class="overflow-hidden max-w-lg  block mb-2 text-sm font-medium text-gray-900 dark:text-white">Featured
+                        Image</label>
 
                     <div id="featured_div"
                         class="w-full bg-gray-700 min-h-[200px] rounded-md flex justify-center items-center">
@@ -124,6 +140,26 @@
 
 
     <script>
+        
+        tinymce.init({
+            selector: '#myTextarea',
+            height: 400,
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+                'table emoticons template paste help'
+            ],
+            toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+                'forecolor backcolor emoticons | help',
+            menu: {
+                favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+            },
+            menubar: 'favs file edit view insert format tools table help',
+            content_css: 'css/content.css'
+        });
+        
+        
         var resize = $('#upload-demo').croppie({
             enableExif: true,
             enableOrientation: true,
@@ -183,5 +219,7 @@
         popCross.onclick = function() {
             popContainer.style.display = "none"
         }
+
+
     </script>
 </x-admin-layout>

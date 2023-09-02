@@ -1,4 +1,7 @@
-<div class="w-full min-h-screen bg-gray-900/50 backdrop-blur hidden justify-center items-center fixed z-50" id="popContainer">
+<!DOCTYPE html>
+
+<div class="w-full min-h-screen bg-gray-900/50 backdrop-blur hidden justify-center items-center fixed z-50"
+    id="popContainer">
     <div class="sub-container p-4 max-w-[500px]">
 
         <div class="flex justify-end hover:cursor-pointer" id="popCross">
@@ -15,21 +18,34 @@
                     <input type="file" class="hidden" name="imageFile" id="image" required> Open
                 </label>
 
-                <a href=""> <button class="text-white mt-4 my-2 bg-red-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5  py-2 text-center">Remove</button></a>
+                <a href=""> <button
+                        class="text-white mt-4 my-2 bg-red-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5  py-2 text-center">Remove</button></a>
 
             </div>
 
             <div class="right">
-                <label for="upload-demo-product" class="block mb-2 text-center text-sm font-medium">Image Preview</label>
+                <label for="upload-demo-product" class="block mb-2 text-center text-sm font-medium">Image
+                    Preview</label>
                 <div id="upload-demo-product" class=""></div>
                 <div id="msgId" style="text-align: center; margin-bottom:10px;"></div>
 
             </div>
         </div>
-        <div class=""><button id="productImage" class="p-2 border rounded-md px-4 text-white bg-green-800">Save</button></div>
+        <div class=""><button id="productImage"
+                class="p-2 border rounded-md px-4 text-white bg-green-800">Save</button></div>
     </div>
 </div>
 
+<style>
+    .tox-silver-sink{
+        display: none !important;
+    }
+
+    .tox-tinymce{
+        border-radius: 10px;
+    }
+
+</style>
 
 <x-admin-layout>
 
@@ -40,41 +56,47 @@
     {{-- popup for img cropping  --}}
 
 
-    <form class=" py-10 px-10 rounded-lg bg-gray-200 dark:bg-gray-800" action="{{ route('saveProduct') }}" method="POST">
+    <form class=" py-10 px-10 rounded-lg h-auto bg-gray-200 dark:bg-gray-800" action="{{ route('saveProduct') }}" method="POST">
+        
         @csrf
         <h2 class="p-2 text-4xl text-center">Create New Product</h2>
-        <div class="mb-6">
-            <label for="email" class="block mb-2 text-sm font-medium">Product Title</label>
-            <input type="text" name="productTitle"
-                class="shadow-sm  border text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
-                placeholder="How to get a car loan?">
-        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 mt-5">
 
-        <div class="mb-6">
-            <label for="email" class="block mb-2 text-sm font-medium ">Description</label>
-            <textarea id="message" rows="4" name="productDes"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="To get your car loan you need to feel this ....."></textarea>
-        </div>
+            <div class="lg:col-span-2">
+               
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium">Product Title</label>
+                    <input type="text" name="productTitle"
+                        class="shadow-sm  border text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
+                        placeholder="How to get a car loan?">
+                </div>
 
-        <div class="mb-6 flex flex-col md:flex-row">
-            
-            <div class="pr-2 w-full">
-                <label for="countries"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categories</label>
-                <select id="productCat" multiple name="categories[]"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 scroll-auto text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option disabled value="" class="scroll-auto">Choose a category</option>
-                        <option class="p-2 border dark:border-gray-800 rounded" value="">
-                            </option>
-                </select>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium ">Description</label>
+                    <x-tinymce-editor/>
+                </div>
 
             </div>
 
-            <div class="pr-2 w-full mb-6">
+
+            <div class="space-y-4">
+
+                <div class="pr-2 w-full">
+                    <label for="countries"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categories</label>
+                    <select id="productCat" multiple name="categories[]"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 scroll-auto text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option disabled value="" class="scroll-auto">Choose a category</option>
+                        <option class="p-2 border dark:border-gray-800 rounded" value="">
+                        </option>
+                    </select>
+
+                </div>
+
                 <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Featured
                     Image</label>
-                <div id="product_img_div" class="w-full h-full bg-gray-700 rounded-md flex justify-center items-center">
+
+                <div id="product_img_div" class="w-full min-h-[200px] bg-gray-700 rounded-md flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"
                         version="1.1" id="Capa_1" width="50px" height="50px" viewBox="0 0 445.199 445.199"
                         xml:space="preserve">
@@ -87,55 +109,70 @@
                         </g>
                     </svg>
                 </div>
+
+                <div class="pr-2 w-full">
+                    <label for="regPrice" class="block mb-2 text-sm font-medium">Regular Price</label>
+                    <input type="number" id="regPrice" name="regPrice"
+                        class="shadow-sm  border  text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
+                        placeholder="Regular Price">
+                </div>
+
+                <div class="pr-2 w-full">
+                    <label for="regPrice" class="block mb-2 text-sm font-medium">Sale Price</label>
+                    <input type="number" id="salePrice" name="salePrice"
+                        class="shadow-sm  border  text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
+                        placeholder="Sale Price">
+                </div>
+
+                <div class="pr-2 w-full">
+                    <label for="email" class="block mb-2 text-sm font-medium">Tags</label>
+                    <input type="email" id="email"
+                        class="shadow-sm  border  text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
+                        placeholder="Ex - Best cooking, Desi cooking">
+                </div>
+
+                <div class="pr-2 w-full">
+                    <label for="countries"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product
+                        status</label>
+                    <select id="countries"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected class="p-2">Choose a status</option>
+                        <option value="US" class="p-2">Public</option>
+                        <option value="CA" class="p-2">Draft</option>
+                    </select>
+                </div>
+
             </div>
 
 
+            <button type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+        </div>
         </div>
 
-        {{-- Price Section  --}}
-        <div class="mb-6 flex ">
-            <div class="pr-2 w-full">
-                <label for="regPrice" class="block mb-2 text-sm font-medium">Regular Price</label>
-                <input type="number" id="regPrice" name="regPrice"
-                    class="shadow-sm  border  text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
-                    placeholder="Regular Price">
-            </div>
-
-            <div class="pr-2 w-full">
-                <label for="regPrice" class="block mb-2 text-sm font-medium">Sale Price</label>
-                <input type="number" id="salePrice" name="salePrice"
-                    class="shadow-sm  border  text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
-                    placeholder="Sale Price">
-            </div>
-        </div>
-
-
-        <div class="mb-6 flex ">
-            <div class="pr-2 w-full">
-                <label for="email" class="block mb-2 text-sm font-medium">Tags</label>
-                <input type="email" id="email"
-                    class="shadow-sm  border  text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
-                    placeholder="Ex - Best cooking, Desi cooking">
-            </div>
-
-            <div class="pr-2 w-full">
-                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product status</label>
-                <select id="countries"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option selected class="p-2">Choose a status</option>
-                    <option value="US" class="p-2">Public</option>
-                    <option value="CA" class="p-2">Draft</option>
-                </select>
-            </div>
-        </div>
-
-
-
-        <button type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
     </form>
 
     <script>
+        tinymce.init({
+            selector: '#myTextarea',
+            height: 400,
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+                'table emoticons template paste help'
+            ],
+            toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+                'forecolor backcolor emoticons | help',
+            menu: {
+                favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+            },
+            menubar: 'favs file edit view insert format tools table help',
+            content_css: 'css/content.css'
+        });
+        
+
         var resize = $('#upload-demo-product').croppie({
             enableExif: true,
             enableOrientation: true,
@@ -164,7 +201,7 @@
         });
 
 
-        
+
 
         var imageDiv = document.getElementById("featured_div")
         var popContainer = document.getElementById("popContainer")

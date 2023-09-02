@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminPostController;
+use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
@@ -16,7 +17,7 @@ Route::get('/dashboard', function () {return view('dashboard');})->middleware(['
 
 Route::get('/', function(){return view('dev');})->name('dev');
 
-Route::get('/adminseeuser', function(){return view('admin.users.view');})->name('adminSeeUser');
+Route::get('/seeusers', [AdminUserController::class, 'viewUser'])->name('adminSeeUser');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::get('/shop', [ProductController::class, 'shop'])->name('shop');
