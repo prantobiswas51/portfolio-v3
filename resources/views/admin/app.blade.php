@@ -43,7 +43,7 @@
         <!-- Page Content -->
         <section class="flex mt-16 flex-col md:flex-row mx-auto">
 
-            <div class="basis-1/4 h-screen text-white hover:text-black p-4 flex flex-col ">
+            <div class="basis-1/4 h-screen bg-gray-50 dark:bg-gray-900 text-white hover:text-black p-4 flex flex-col ">
                 @include('admin.sidebar')
             </div>
 
