@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/2aee2ea5d2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Croppie --}}
@@ -19,20 +20,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script>
 
     {{-- Tiny MCE  --}}
-    <script type="text/javascript" src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js' referrerpolicy="origin">
-
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
-    </style>
+    <script type="text/javascript" src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
     <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches)) {
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark')
         }
     </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+    </style>
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900">
