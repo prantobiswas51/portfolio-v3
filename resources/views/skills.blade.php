@@ -3,11 +3,11 @@
     <h2>My Working Area</h2>
 </div>
 
-<div class="grid pb-24 grid-cols-1 md:grid-cols-4 gap-6 px-6 mx-auto">
+<div class="grid justify-items-center pb-24 grid-cols-1 md:grid-cols-4 gap-6 px-6 mx-auto">
 
     @foreach ($categories as $category)
         
-    <div class="max-w-sm bg-gray-700  mb-2 rounded-lg shadow">
+    <div class="max-w-[19rem] bg-gray-50 dark:bg-gray-700  mb-2 rounded-lg shadow">
         <a href="#" class="">
             <img class="rounded-t-lg" src="{{ asset('storage/admin/categories/' . $category->catImageUrl) }}" alt="Category Image" />
         </a>

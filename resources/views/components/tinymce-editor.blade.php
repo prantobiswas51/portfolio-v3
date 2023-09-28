@@ -1,5 +1,5 @@
 <div>
     <form method="post">
-        <textarea id="myTextarea"></textarea>
+        <textarea name="postDes" id="myTextarea"></textarea>
     </form>
 </div>

@@ -30,17 +30,6 @@
     </div>
 </div>
 
-<style>
-    .tox-silver-sink{
-        display: none !important;
-    }
-
-    .tox-tinymce{
-        border-radius: 10px;
-    }
-
-</style>
-
 <x-admin-layout>
 
     @if ($errors->any())
@@ -64,7 +53,13 @@
 
                 <div class="mb-6">
                     <label for="email" class="block mb-2 text-sm font-medium ">Description</label>
-                    <x-tinymce-editor/>
+                    
+                    <div>
+              
+                        <textarea name="postDes" id="myPostDes"></textarea>
+                  
+                    </div>
+
                 </div>
 
                 
@@ -142,7 +137,7 @@
     <script>
         
         tinymce.init({
-            selector: '#myTextarea',
+            selector: '#myPostDes',
             height: 400,
             plugins: [
                 'advlist autolink link image lists charmap print preview hr anchor pagebreak',

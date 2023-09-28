@@ -18,6 +18,7 @@ Route::get('/dashboard', function () {return view('dashboard');})->middleware(['
 Route::get('/', function(){return view('dev');})->name('dev');
 
 Route::get('/seeusers', [AdminUserController::class, 'viewUser'])->name('adminSeeUser');
+Route::get('/viewpost/{id}', [AdminPostController::class, 'viewPost'])->name('openPost');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::get('/shop', [ProductController::class, 'shop'])->name('shop');
@@ -26,6 +27,8 @@ Route::get('/skills', [CategoryController::class, 'skills'])->name('skills');
 Route::get('/skills/{id}', [CategoryController::class, 'viewSkillProject'])->name('viewSkillProject');
 
 Route::get('/contact', function(){return view('contact');})->name('contact');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

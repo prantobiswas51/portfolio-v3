@@ -1,25 +1,26 @@
 <x-app-layout>
-   <main class="mt-10">
+   <main class="mt-10 dark:text-gray-50">
 
-      <div class="mb-4 md:mb-0 w-full mx-auto relative">
+      <div class="mb-4 md:mb-0 w-full mx-auto relative ">
         <div class="px-4 lg:px-0">
-          <h2 class="text-4xl font-semibold text-gray-800 leading-tight">
+          <h2 class="text-4xl font-semibold  leading-tight">
             Pellentesque a consectetur velit, ac molestie ipsum. Donec sodales, massa et auctor.
           </h2>
-          <a 
-            href="#"
-            class="py-2 text-green-700 inline-flex items-center justify-center mb-2"
-          >
+          <a href="#" class="py-2 text-green-700 inline-flex items-center justify-center mb-2">
             Cryptocurrency
           </a>
         </div>
 
-        <img src="https://images.unsplash.com/photo-1587614387466-0a72ca909e16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" class="w-full object-cover lg:rounded" style="height: 28em;"/>
-      </div>
+        </div>
 
       <div class="flex flex-col lg:flex-row lg:space-x-12">
+        
 
-        <div class="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
+        <div class="px-4 lg:px-0 mt-12  text-lg leading-relaxed w-full lg:w-3/4">
+
+          <img src="https://images.unsplash.com/photo-1587614387466-0a72ca909e16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" class="w-full object-cover lg:rounded" style="height: 28em;"/>
+     
+          
           <p class="pb-6">Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is
             justice. Six draw
             you him full not mean evil. Prepare garrets it expense windows shewing do an. She projection advantages
@@ -54,7 +55,7 @@
             is learning my graceful. Feel plan know is he like on pure. See burst found sir met think hopes are marry
             among. Delightful remarkably new assistance saw literature mrs favourable.</p>
 
-          <h2 class="text-2xl text-gray-800 font-semibold mb-4 mt-4">Uneasy barton seeing remark happen his has</h2>
+          <h2 class="text-2xl  font-semibold mb-4 mt-4">Uneasy barton seeing remark happen his has</h2>
 
           <p class="pb-6">Guest it he tears aware as. Make my no cold of need. He been past in by my hard. Warmly thrown
             oh he common
@@ -88,15 +89,15 @@
               <img src="https://randomuser.me/api/portraits/men/97.jpg"
                 class="h-10 w-10 rounded-full mr-2 object-cover" />
               <div>
-                <p class="font-semibold text-gray-700 text-sm"> Mike Sullivan </p>
-                <p class="font-semibold text-gray-600 text-xs"> Editor </p>
+                <p class="font-semibold  text-sm"> Mike Sullivan </p>
+                <p class="font-semibold  text-xs"> Editor </p>
               </div>
             </div>
-            <p class="text-gray-700 py-3">
+            <p class=" py-3">
               Mike writes about technology
               Yourself required no at thoughts delicate landlord it be. Branched dashwood do is whatever it.
             </p>
-            <button class="px-2 py-1 text-gray-100 bg-green-700 flex w-full items-center justify-center rounded">
+            <button class="px-2 py-1 dark:text-gray-100 bg-green-700 flex w-full items-center justify-center rounded">
               Follow 
               <i class='bx bx-user-plus ml-2' ></i>
             </button>

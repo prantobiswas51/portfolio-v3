@@ -36,17 +36,6 @@
     </div>
 </div>
 
-<style>
-    .tox-silver-sink{
-        display: none !important;
-    }
-
-    .tox-tinymce{
-        border-radius: 10px;
-    }
-
-</style>
-
 <x-admin-layout>
 
     @if ($errors->any())
@@ -155,7 +144,7 @@
 
     <script>
         tinymce.init({
-            selector: '#myTextarea',
+            selector: '#myPostDes',
             height: 400,
             plugins: [
                 'advlist autolink link image lists charmap print preview hr anchor pagebreak',
