@@ -1,6 +1,16 @@
 <x-admin-layout>
+
+
+    <form action="" method="get" class="flex mb-4 justify-between">
+        <input type="text" placeholder="Search users" class="rounded-s-[50px] w-full">
+        <input type="submit" value="Search" class="bg-gray-800 hover:cursor-pointer rounded-r-[50px] text-black dark:text-white p-2">
+    </form>
+
+
     <div class=" rounded-xlp-2">
+
         <table class="min-w-full rounded-lg divide-y divide-gray-200 dark:divide-gray-600">
+            
             <thead class="bg-gray-50 dark:bg-gray-700">
                 <tr>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -14,6 +24,7 @@
                     </th>
                 </tr>
             </thead>
+
             <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
     
     

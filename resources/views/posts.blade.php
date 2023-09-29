@@ -4,8 +4,8 @@
 
     <div class="searchblog p-2 px-6">
         <form action="" method="get" class="flex justify-between">
-            <input type="text" placeholder="Search blog" class="w-full">
-            <input type="submit" value="Search" class="bg-gray-800 text-black dark:text-white p-2">
+            <input type="text" placeholder="Search blog" class="rounded-s-[50px] w-full">
+            <input type="submit" value="Search" class="bg-gray-800 hover:cursor-pointer rounded-r-[50px] text-black dark:text-white p-2">
         </form>
     </div>
 

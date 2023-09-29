@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+<style>
+    .tox-tinymce{
+        border-radius: 10px;
+    }
+</style>
+
+{{-- popup for img cropping  --}}
 <div class="w-full min-h-screen bg-gray-900/50 backdrop-blur hidden justify-center items-center fixed z-50"
     id="popContainer">
     <div class="sub-container p-4 max-w-[500px]">
@@ -31,7 +38,7 @@
 
             </div>
         </div>
-        <div class=""><button id="productImage"
+        <div class=""><button id="saveProductImage"
                 class="p-2 border rounded-md px-4 text-white bg-green-800">Save</button></div>
     </div>
 </div>
@@ -42,27 +49,32 @@
         {!! implode('', $errors->all('<div>:message</div>')) !!}
     @endif
 
-    {{-- popup for img cropping  --}}
+    <form class=" py-10 px-10 rounded-lg h-auto bg-gray-200 dark:bg-gray-800" action="{{ route('saveProduct') }}"
+        method="POST">
 
-
-    <form class=" py-10 px-10 rounded-lg h-auto bg-gray-200 dark:bg-gray-800" action="{{ route('saveProduct') }}" method="POST">
-        
         @csrf
-        <h2 class="p-2 text-4xl text-center">Create New Product</h2>
+        <h2 class="p-2 text-4xl text-center">Add New Product</h2>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 mt-5">
 
             <div class="lg:col-span-2">
-               
+
                 <div class="mb-6">
-                    <label for="email" class="block mb-2 text-sm font-medium">Product Title</label>
-                    <input type="text" name="productTitle"
+                    <label for="productTitle" class="block mb-2 text-sm font-medium">Title</label>
+                    <input type="text" name="productTitle" id="productTitle"
                         class="shadow-sm  border text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
                         placeholder="How to get a car loan?">
                 </div>
 
                 <div class="mb-6">
+                    <label for="productShortDes" class="block mb-2 text-sm font-medium">Short Description</label>
+                    <textarea type="text" name="productShortDes" id="productShortDes"
+                        class="shadow-sm  border text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
+                        placeholder="How to get a car loan?"> </textarea>
+                </div>
+
+                <div class="mb-6">
                     <label for="email" class="block mb-2 text-sm font-medium ">Description</label>
-                    <x-tinymce-editor/>
+                    <textarea name="productDes" id="productDes"></textarea>
                 </div>
 
             </div>
@@ -82,10 +94,12 @@
 
                 </div>
 
-                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Featured
+                <label for="product_featured_div"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Featured
                     Image</label>
 
-                <div id="product_img_div" class="w-full min-h-[200px] bg-gray-700 rounded-md flex justify-center items-center">
+                <div id="product_featured_div"
+                    class="w-full bg-gray-700 min-h-[200px] rounded-md flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"
                         version="1.1" id="Capa_1" width="50px" height="50px" viewBox="0 0 445.199 445.199"
                         xml:space="preserve">
@@ -98,6 +112,8 @@
                         </g>
                     </svg>
                 </div>
+
+                <input type="hidden" class="" id="productImage" name="productImage" value="">
 
                 <div class="pr-2 w-full">
                     <label for="regPrice" class="block mb-2 text-sm font-medium">Regular Price</label>
@@ -121,14 +137,13 @@
                 </div>
 
                 <div class="pr-2 w-full">
-                    <label for="countries"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product
-                        status</label>
-                    <select id="countries"
+                    <label for="productStatus"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                    <select id="productStatus" name="productStatus"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected class="p-2">Choose a status</option>
-                        <option value="US" class="p-2">Public</option>
-                        <option value="CA" class="p-2">Draft</option>
+                        <option value="public" class="p-2">Public</option>
+                        <option value="raft" class="p-2">Draft</option>
                     </select>
                 </div>
 
@@ -144,7 +159,7 @@
 
     <script>
         tinymce.init({
-            selector: '#myPostDes',
+            selector: '#productDes',
             height: 400,
             plugins: [
                 'advlist autolink link image lists charmap print preview hr anchor pagebreak',
@@ -155,26 +170,30 @@
                 'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
                 'forecolor backcolor emoticons | help',
             menu: {
-                favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+                favs: {
+                    title: 'My Favorites',
+                    items: 'code visualaid | searchreplace | emoticons'
+                }
             },
             menubar: 'favs file edit view insert format tools table help',
             content_css: 'css/content.css'
         });
-        
+
 
         var resize = $('#upload-demo-product').croppie({
             enableExif: true,
             enableOrientation: true,
             viewport: {
-                width: 228,
-                height: 128,
+                width: 500,
+                height: 320,
                 type: 'squire' //circle
             },
             boundary: {
-                width: 250,
-                height: 150
+                width: 510,
+                height: 330
             }
         });
+
 
 
         $('#image').on('change', function() {
@@ -190,12 +209,30 @@
         });
 
 
+        $('#saveProductImage').on('click', function(ev) {
+
+            resize.croppie('result', {
+                type: 'canvas',
+                size: 'viewport'
+            }).then(function(img) {
+
+                if (img != null) {
+                    document.getElementById('productImage').value = img
+                    document.getElementById('product_featured_div').innerHTML = "Image Picked"
+                    popContainer.style.display = "none"
+
+                } else {
+                    console.log('Getting Error');
+                }
+            });
+
+            ev.preventDefault()
+        });
 
 
-        var imageDiv = document.getElementById("featured_div")
+        var imageDiv = document.getElementById("product_featured_div")
         var popContainer = document.getElementById("popContainer")
         var popCross = document.getElementById("popCross")
-
 
         imageDiv.onclick = function() {
             popContainer.style.display = "flex"

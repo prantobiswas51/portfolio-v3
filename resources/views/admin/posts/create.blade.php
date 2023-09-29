@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <div class="w-full min-h-screen bg-gray-900/50 backdrop-blur hidden justify-center items-center fixed z-50"
     id="popContainer">
     <div class="sub-container p-4 max-w-[700px]">
@@ -36,7 +35,8 @@
         {!! implode('', $errors->all('<div>:message</div>')) !!}
     @endif
 
-    <form class=" py-10 px-10 rounded-lg h-auto bg-gray-200 dark:bg-gray-800" action="{{ route('savepost') }}" method="POST">
+    <form class=" py-10 px-10 rounded-lg h-auto bg-gray-200 dark:bg-gray-800" action="{{ route('savepost') }}"
+        method="POST">
         @csrf
         <h2 class="p-2 text-4xl text-center">Create New Post</h2>
 
@@ -45,24 +45,18 @@
             <div class="lg:col-span-2">
 
                 <div class="mb-6">
-                    <label for="email" class="block mb-2 text-sm font-medium">Post Title</label>
+                    <label for="email" class="block mb-2 text-sm font-medium">Title</label>
                     <input type="text" name="postTitle"
                         class="shadow-sm  border text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
                         placeholder="How to get a car loan?">
                 </div>
 
                 <div class="mb-6">
-                    <label for="email" class="block mb-2 text-sm font-medium ">Description</label>
-                    
-                    <div>
-              
-                        <textarea name="postDes" id="myPostDes"></textarea>
-                  
-                    </div>
-
+                    <label for="myPostDes" class="block mb-2 text-sm font-medium ">Description</label>
+                    <textarea name="postDes" id="myPostDes"></textarea>
                 </div>
 
-                
+
 
             </div>
 
@@ -102,6 +96,7 @@
                             </g>
                         </svg>
                     </div>
+                    
                 </div>
 
                 <input type="hidden" class="" id="imgSaver" name="postImage" value="">
@@ -110,14 +105,14 @@
 
                 <div class="pr-2 w-full">
                     <label for="email" class="block mb-2 text-sm font-medium">Tags</label>
-                    <input type="email" id="email" name="tags"
+                    <textarea type="email" id="email" name="tags"
                         class="shadow-sm  border  text-sm rounded-lg text-gray-900 bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full p-2.5"
-                        placeholder="Ex - Best cooking, Desi cooking">
+                        placeholder="Ex - Best cooking, Desi cooking"></textarea>
                 </div>
 
                 <div class="pr-2 w-full">
-                    <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Post
-                        status</label>
+                    <label for="countries"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
                     <select id="countries" name="status"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected class="p-2">Choose a status</option>
@@ -135,7 +130,6 @@
 
 
     <script>
-        
         tinymce.init({
             selector: '#myPostDes',
             height: 400,
@@ -148,13 +142,16 @@
                 'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
                 'forecolor backcolor emoticons | help',
             menu: {
-                favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+                favs: {
+                    title: 'My Favorites',
+                    items: 'code visualaid | searchreplace | emoticons'
+                }
             },
             menubar: 'favs file edit view insert format tools table help',
             content_css: 'css/content.css'
         });
-        
-        
+
+
         var resize = $('#upload-demo').croppie({
             enableExif: true,
             enableOrientation: true,
@@ -214,7 +211,5 @@
         popCross.onclick = function() {
             popContainer.style.display = "none"
         }
-
-
     </script>
 </x-admin-layout>

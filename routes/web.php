@@ -52,6 +52,7 @@ Route::middleware(['auth','sudhuadminallowed'])->group(function () {
     Route::get('/admin/product/create', [ProductController::class, 'create'])->name('addProduct');
     Route::get('/admin/product/view', [ProductController::class, 'index'])->name('viewProduct');
     Route::post('/admin/product/save', [ProductController::class, 'save'])->name('saveProduct');
+    Route::get('/products/{id}', [ProductController::class, 'viewSingleProduct'])->name('viewSingleProduct');
     
 });
 

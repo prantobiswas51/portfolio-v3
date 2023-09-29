@@ -21,9 +21,9 @@
         
         <div
             class="w-full max-w-sm bg-white border m-4 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
+            <a href="/products/{{ $product->id }}">
                 <img class=" mb-6 rounded-t-lg"
-                    src="https://offer.bdshop.com/image/cache/catalog/wp-content/uploads/2022/09/bluetooth-call-smartwatch-600x600.jpeg.webp"
+                    src="/storage/admin/products/{{ $product->productImg }}"
                     alt="product image" />
             </a>
             <div class="px-5 pb-5"> 

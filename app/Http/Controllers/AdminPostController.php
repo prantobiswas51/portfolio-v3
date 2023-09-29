@@ -35,6 +35,7 @@ class AdminPostController extends Controller
     }
 
     public function save(Request $request){
+
         
         $image = $request->postImage;  // your base64 encoded
         $image = str_replace('data:image/png;base64,', '', $image);
@@ -46,6 +47,7 @@ class AdminPostController extends Controller
         $validated = $request->validate([
             'postTitle' => ['required', 'string', 'max:255'],
             'postDes' => 'required',
+            'status' => 'required',
             'categories' => 'required',
         ]);
 
@@ -54,7 +56,7 @@ class AdminPostController extends Controller
             'postDes'=>$request->postDes,
             'postImg'=> $imageName,
             'user_id'=>auth()->user()->id,
-            'postStatus'=>'bllla',
+            'postStatus'=> $request->status,
         ]);
 
         $post->categories()->sync($request->categories);
