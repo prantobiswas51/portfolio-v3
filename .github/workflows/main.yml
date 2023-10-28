@@ -15,7 +15,7 @@ jobs:
         node-version: 'v20.8.0'
     - run: npm install
     - run: npm run build
-    - name: 📂 Sync files
+    - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: 89.117.9.152
@@ -23,7 +23,7 @@ jobs:
         password: ${{ secrets.ftp_password }}
 
 
-    # Only for database, vendor, node_modules rgf
+    # Only for database, vendor, node_modules
     - name: Deploy to production
       uses: appleboy/ssh-action@master
       with:
