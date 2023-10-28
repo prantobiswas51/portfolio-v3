@@ -28,7 +28,7 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         username: u950298905
-        host: 31.170.160.185
+        host: 89.117.9.152
         password: ${{ secrets.ssh_password }}
         port: 65002
         script: |
