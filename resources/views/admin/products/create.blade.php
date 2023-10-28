@@ -82,16 +82,18 @@
 
             <div class="space-y-4">
 
-                <div class="pr-2 w-full">
+            <div class="pr-2 w-full">
                     <label for="countries"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categories</label>
-                    <select id="productCat" multiple name="categories[]"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 scroll-auto text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <select id="countries" multiple name="categories[]"
+                        class="bg-gray-50 border border-gray-300 overflow-auto text-gray-900 scroll-auto text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option disabled value="" class="scroll-auto">Choose a category</option>
-                        <option class="p-2 border dark:border-gray-800 rounded" value="">
-                        </option>
-                    </select>
 
+                        @foreach ($categories as $category)
+                            <option class="p-2 border dark:border-gray-800 rounded" value="{{ $category->id }}">
+                                {{ $category->catName }}</option>
+                        @endforeach
+                    </select>
                 </div>
 
                 <label for="product_featured_div"

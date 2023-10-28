@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -15,7 +16,8 @@ class ProductController extends Controller
     }
 
     public function create(){
-        return view('admin.products.create');
+        $categories =  Category::get();
+        return view('admin.products.create', compact('categories'));
     }
 
     public function save(Request $request){
@@ -47,6 +49,7 @@ class ProductController extends Controller
             
         ]);
 
+        $product->categories()->sync($request->categories);
         return back()->with('message','Success');
     }
 

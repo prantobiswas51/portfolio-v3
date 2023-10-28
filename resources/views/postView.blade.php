@@ -7,7 +7,7 @@
                     {{ $posts->postTitle }}
                 </h2>
                 <a href="#" class="py-2 text-green-700 inline-flex items-center justify-center mb-2">
-                    Cryptocurrency
+                    FFeee eeeeeee
                 </a>
             </div>
 
@@ -34,8 +34,7 @@
                         </div>
                     </div>
                     <p class=" py-3">
-                      Pranto writes about technology
-                        Yourself required no at thoughts delicate landlord it be. Branched dashwood do is whatever it.
+                      Pranto writes about technology Yourself required no at thoughts delicate landlord it be. Branched dashwood do is whatever it.
                     </p>
                     <button
                         class="px-2 py-1 dark:text-gray-100 bg-green-700 flex w-full items-center justify-center rounded">
