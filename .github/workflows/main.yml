@@ -19,7 +19,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: 89.117.9.152
-        username: u950298905
+        username: u950298905.pranto
         password: ${{ secrets.ftp_password }}
 
 
@@ -33,8 +33,9 @@ jobs:
         port: 65002
         script: |
           cd /home/u950298905/domains/techland360.com/public_html/subdomains/pranto/
-          cp .env.example .env
-          php artisan key:generate
+          php artisan down
+          # cp .env.example .env
+          # php artisan key:generate
           php -r "readfile('https://getcomposer.org/installer');" | php -c php.ini
           php composer.phar install --no-interaction --prefer-dist --optimize-autoloader
           php artisan migrate:fresh --seed
