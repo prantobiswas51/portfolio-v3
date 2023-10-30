@@ -29,13 +29,13 @@ jobs:
         with:
           username: u950298905
           host: 89.117.9.152
-          password: ${{ secrets.ftp_password }}
+          password: ${{ secrets.ssh_password }}
           port: 65002
           script: |
-            cd /home/u950298905/domains/techland360.com/public_html/subdomains/pranto/
+            cd /home/u950298905/domains/techland360.com/public_html/pranto/
             php artisan down
             # cp .env.example .env
-            # php artisan key:generate
+            php artisan key:generate
             php -r "readfile('https://getcomposer.org/installer');" | php -c php.ini
             php composer.phar install --no-interaction --prefer-dist --optimize-autoloader
             php artisan migrate:fresh --seed
