@@ -32,7 +32,7 @@ jobs:
           password: ${{ secrets.ssh_password }}
           port: 65002
           script: |
-            cd /home/u950298905/domains/techland360.com/public_html/pranto
+            cd /home/u950298905/domains/techland360.com/public_html/pranto/
             php artisan down
             # cp .env.example .env
             # php artisan key:generate
