@@ -78,15 +78,14 @@
 
                             <x-slot name="content">
 
-                                @if (Auth::user()->role != "Admin")
-                                    <x-dropdown-link :href="route('dashboard')">
-                                        {{ __('Dashboard') }}
-                                    </x-dropdown-link>
-                                @else
+                                @if (Auth::user()->role == "Admin")
                                     <x-dropdown-link :href="route('admin')">
                                         {{ __('Admin Panel') }}
-                                    </x-dropdown-link>
+                                    </x-dropdown-link>                                    
                                 @endif
+                                <x-dropdown-link :href="route('dashboard')">
+                                    {{ __('Dashboard') }}
+                                </x-dropdown-link>
 
                                 <x-dropdown-link :href="route('profile.edit')">
                                     {{ __('Profile') }}

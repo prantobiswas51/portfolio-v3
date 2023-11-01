@@ -38,7 +38,7 @@
                             </button>
                         </a>
 
-                        <a href="">
+                        <a href="/edit">
                             <button
                                 class="border border-primary-600 rounded py-1.5 px-3 hover:bg-primary-600 hover:text-gray-100 transition-all">
 

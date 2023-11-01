@@ -18,7 +18,7 @@ Route::get('/dashboard', function () {return view('dashboard');})->middleware(['
 Route::get('/', function(){return view('dev');})->name('dev');
 
 Route::get('/seeusers', [AdminUserController::class, 'viewUser'])->name('adminSeeUser');
-Route::get('/viewpost/{id}', [AdminPostController::class, 'viewPost'])->name('openPost');
+Route::get('/viewpost/{post}', [PostController::class, 'viewPost'])->name('openPost');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::get('/shop', [ProductController::class, 'shop'])->name('shop');

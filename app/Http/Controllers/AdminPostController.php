@@ -29,11 +29,6 @@ class AdminPostController extends Controller
         return redirect('/admin/posts/view/')->with('Status',"Post Deleted Successfully");
     }
 
-    public function viewPost($id){
-        $posts = Post::find($id);
-        return view('postView', compact('posts'));
-    }
-
     public function save(Request $request){
 
         

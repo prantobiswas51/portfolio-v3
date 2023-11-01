@@ -19,26 +19,26 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ftp.techland360.com
-          username: u950298905.pranto
+          username: u443785549.pranto
           password: ${{ secrets.ftp_password }}
-          # efsf4444444#R$
+          # FEf4455$%$tfefreF
 
       # Only for database, vendor, node_modulesf
       - name: Deploy to production
         uses: appleboy/ssh-action@master
         with:
-          username: u950298905
-          host: 89.117.9.152
+          username: u443785549
+          host: 193.203.185.71
           password: ${{ secrets.ssh_password }}
           port: 65002
           script: |
-            cd /home/u950298905/domains/techland360.com/public_html/pranto/
-            php artisan down
-            # cp .env.example .env
-            # php artisan key:generate
+            cd /home/u950298905/domains/techland360.com/public_html/subdomains/pranto/
+            # php artisan down
+            cp .env.example .env
+            php artisan key:generate
             php -r "readfile('https://getcomposer.org/installer');" | php -c php.ini
             php composer.phar install --no-interaction --prefer-dist --optimize-autoloader
-            php artisan migrate:fresh --seed
+            php artisan migrate:fresh
             php artisan storage:link
             php artisan config:clear
             php artisan optimize:clear
