@@ -1,5 +1,5 @@
-<x-admin-layout> 
+<x-admin-layout>
     <div class="p-2">
-        Edit all the posts 
+        {{-- @livewire('post.post-editor') --}}
     </div>
 </x-admin-layout>

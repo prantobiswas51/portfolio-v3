@@ -13,71 +13,92 @@
     </div>
 
 
-    <div class="flex flex-wrap justify-center">
 
-        {{-- Products --}}
-        @foreach ($products as $product)
-            
-        
-        <div
-            class="w-full max-w-sm bg-white border m-4 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="/products/{{ $product->id }}">
-                <img class=" mb-6 rounded-t-lg"
-                    src="/storage/admin/products/{{ $product->productImg }}"
-                    alt="product image" />
-            </a>
-            <div class="px-5 pb-5"> 
-                <a href="#">
-                    <h5 class="text-xl font-semibold text-gray-900 dark:text-white">{{$product->productTitle}}</h5>
-                </a>
-                <a href="#" class="flex mt-2">
-                  <svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v2.5A2.25 2.25 0 004.25 9h2.5A2.25 2.25 0 009 6.75v-2.5A2.25 2.25 0 006.75 2h-2.5zm0 9A2.25 2.25 0 002 13.25v2.5A2.25 2.25 0 004.25 18h2.5A2.25 2.25 0 009 15.75v-2.5A2.25 2.25 0 006.75 11h-2.5zm9-9A2.25 2.25 0 0011 4.25v2.5A2.25 2.25 0 0013.25 9h2.5A2.25 2.25 0 0018 6.75v-2.5A2.25 2.25 0 0015.75 2h-2.5zm0 9A2.25 2.25 0 0011 13.25v2.5A2.25 2.25 0 0013.25 18h2.5A2.25 2.25 0 0018 15.75v-2.5A2.25 2.25 0 0015.75 11h-2.5z" clip-rule="evenodd"></path>
-                  </svg>
-                    <p class="ml-2 text-gray-900 dark:text-white">
-                      Web design
+        <div class="sm:flex sm:justify-center flex-wrap">
+            <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+                <div class="p-6">
+                    <h5 class="mb-2 text-xl font-medium leading-tight">Web Design</h5>
+                    <p class="mb-4 text-base">
+                        Get a design for your website or design your website with our help. This category includes WordPress design like Elementor, Newpaper (TagDiv Composer) etc designs too. Hire us for any
+                        website design jobs.
                     </p>
-                </a>
-                <div class="flex items-center mt-2.5 mb-5">
-                    <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor" viewBox="0 0 22 20">
-                        <path
-                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor" viewBox="0 0 22 20">
-                        <path
-                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor" viewBox="0 0 22 20">
-                        <path
-                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor" viewBox="0 0 22 20">
-                        <path
-                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                        <path
-                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                    </svg>
-                    <span
-                        class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-                    <a href="#"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
-                        to cart</a>
-                </div>
+              </div>
+              <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
+                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+              </div>
             </div>
-        </div>
-        @endforeach
 
-    </div>
+            <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+                <div class="p-6">
+                    <h5 class="mb-2 text-xl font-medium leading-tight">Web Development</h5>
+                    <p class="mb-4 text-base">
+                    Develop your website's funtionality through us. It could be custom coding or funtionalities that could be gained through plugins or themes.
+                    </p>
+              </div>
+              <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
+                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+              </div>
+            </div>
+
+            <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+                <div class="p-6">
+                    <h5 class="mb-2 text-xl font-medium leading-tight">WordPress Debugging</h5>
+                    <p class="mb-4 text-base">
+                    Debug or remove virus from your website with our help. We fix any design or funtionality related issues. Removing malware from website also includes in this category.
+                    </p>
+              </div>
+              <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
+                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+              </div>
+            </div>
+
+            <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+                <div class="p-6">
+                    <h5 class="mb-2 text-xl font-medium leading-tight">WordPress Plugin Development</h5>
+                    <p class="mb-4 text-base">
+                        We Develop custom plugin to enchance your website's funtionality. Have a chat with us to understand if you need it or not!
+                    </p>
+              </div>
+              <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
+                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+              </div>
+            </div>
+
+            <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+                <div class="p-6">
+                    <h5 class="mb-2 text-xl font-medium leading-tight">Laravel Developer</h5>
+                    <p class="mb-4 text-base">
+                        Develop your website with Laravel Framework and enjoy it awesome services. If you want fully custom website then you can choose laravel framework to build one.
+                    </p>
+              </div>
+              <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
+                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+              </div>
+            </div>
+
+
+            <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+                <div class="p-6">
+                    <h5 class="mb-2 text-xl font-medium leading-tight">Graphic Design</h5>
+                    <p class="mb-4 text-base">
+                    Design graphical content, photo edit, website images, banners, icons and so on. We use Photpshop, Illustrator, Xd and Figma as required. 
+                    </p>
+              </div>
+              <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
+                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+              </div>
+            </div>
+
+
+            
+          
+        </div>
 
 
 </x-app-layout>
