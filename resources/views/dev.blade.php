@@ -9,10 +9,8 @@
                     <h1>I am </h1>
                     <h1 class="text-2xl font-harlow px-4"> Pranto Biswas </h1>
                 </div>
-                <div class="name">Full Stack Developer Testing  Files</div>
-                <div class="name">Lorem Ipsum was invented by Lorem Doto who was
-                    an saint martin lander, who couldn't stay for long
-                    time in this island.</div>
+                <div class="name">Full Stack Developer</div>
+                <div class="name">Transforming ideas into stunning digital experiences, from design to development. Let's create something extraordinary together.</div>
 
                 <div class="my-4 flex">
                     <div>
@@ -36,8 +34,7 @@
                 <div class="">
                     <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Hire
                             Me</x-buttons></a>
-                    <a href="{{ route('skills') }}"><x-primary-button class="my-4 justify-center">Check
-                            Skills</x-buttons></a>
+                    <a href="{{ route('skills') }}"><x-primary-button class="my-4 justify-center">Check Works</x-buttons></a>
                 </div>
             </div>
 
@@ -86,16 +83,3 @@
     </div>
 </x-app-layout>
 
-
-.btn-readmore {
-visibility: hidden;
-position: relative;
-}
-
-.btn-readmore:after {
-visibility: visible;
-position: absolute;
-top: 0;
-left: 0;
-content: "Continuar Leyendo >";
-}

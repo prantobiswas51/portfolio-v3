@@ -30,7 +30,7 @@
                     </x-nav-link>
 
                     <x-nav-link :href="route('shop')">
-                        {{ __('Shop') }}
+                        {{ __('Works') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('contact')">

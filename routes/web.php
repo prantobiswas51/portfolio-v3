@@ -26,7 +26,7 @@ Route::get('/seeusers', [AdminUserController::class, 'viewUser'])->name('adminSe
 Route::get('/viewpost/{post}', [PostController::class, 'viewPost'])->name('openPost');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
-Route::get('/shop', [ProductController::class, 'shop'])->name('shop');
+Route::get('/work', [ProductController::class, 'work'])->name('work');
 
 Route::get('/skills', [CategoryController::class, 'skills'])->name('skills');
 Route::get('/skills/{id}', [CategoryController::class, 'viewSkillProject'])->name('viewSkillProject');
