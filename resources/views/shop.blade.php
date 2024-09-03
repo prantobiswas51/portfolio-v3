@@ -25,7 +25,7 @@
                     </p>
               </div>
               <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
-                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+                <a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white"><button class="">Get a quote Now</button></a>
               </div>
             </div>
 
@@ -38,7 +38,7 @@
                     </p>
               </div>
               <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
-                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+                <a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white"><button class="">Get a quote Now</button></a>
               </div>
             </div>
 
@@ -51,7 +51,7 @@
                     </p>
               </div>
               <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
-                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+                <a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white"><button class="">Get a quote Now</button></a>
               </div>
             </div>
 
@@ -64,7 +64,7 @@
                     </p>
               </div>
               <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
-                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+                <a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white"><button class="">Get a quote Now</button></a>
               </div>
             </div>
 
@@ -77,7 +77,7 @@
                     </p>
               </div>
               <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
-                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+                <a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white"><button class="">Get a quote Now</button></a>
               </div>
             </div>
 
@@ -91,7 +91,7 @@
                     </p>
               </div>
               <div class="mt-auto rounded-b-lg border-t-2 border-neutral-100 bg-sky-500 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
-                <button class=""><a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white">Get a quote Now</a></button>
+                <a href="mailto:prantobd320@gmail.com" class="text-black dark:text-white"><button class="">Get a quote Now</button></a>
               </div>
             </div>
 
