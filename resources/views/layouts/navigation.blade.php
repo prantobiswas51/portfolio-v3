@@ -29,7 +29,7 @@
                         {{ __('Skills') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('shop')">
+                    <x-nav-link :href="route('work')">
                         {{ __('Works') }}
                     </x-nav-link>
 
@@ -156,8 +156,8 @@
                 {{ __('Skills') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link :href="route('shop')">
-                {{ __('Shop') }}
+            <x-responsive-nav-link :href="route('work')">
+                {{ __('Works') }}
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('contact')">

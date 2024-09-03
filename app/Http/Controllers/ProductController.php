@@ -53,9 +53,8 @@ class ProductController extends Controller
         return back()->with('message','Success');
     }
 
-    public function shop(){
-        $products = Product::all();
-        return view('shop', compact('products'));
+    public function work(){
+        return view('works');
     }
 
     public function viewSingleProduct($id){
