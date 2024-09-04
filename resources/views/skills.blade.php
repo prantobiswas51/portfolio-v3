@@ -40,7 +40,7 @@
 
 <div class="sm:flex sm:justify-center flex-wrap">
     <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
-        <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+        <img class="rounded-t-lg" src="./images/Web-design.jpg" alt="" />
         <div class="p-6">
             <h5 class="mb-2 text-xl font-medium leading-tight">Web Design</h5>
             <p class="mb-4 text-base">
@@ -54,7 +54,7 @@
     </div>
 
     <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
-        <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+        <img class="rounded-t-lg" src="./images/Web_development.png" alt="" />
         <div class="p-6">
             <h5 class="mb-2 text-xl font-medium leading-tight">Web Development</h5>
             <p class="mb-4 text-base">
@@ -67,7 +67,7 @@
     </div>
 
     <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
-        <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+        <img class="rounded-t-lg" src="./images/Debugging-wp.png" alt="" />
         <div class="p-6">
             <h5 class="mb-2 text-xl font-medium leading-tight">WordPress Debugging</h5>
             <p class="mb-4 text-base">
@@ -80,7 +80,7 @@
     </div>
 
     <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
-        <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+        <img class="rounded-t-lg" src="./images/wp-plugin-dev.png" alt="" />
         <div class="p-6">
             <h5 class="mb-2 text-xl font-medium leading-tight">WordPress Plugin Development</h5>
             <p class="mb-4 text-base">
@@ -93,7 +93,7 @@
     </div>
 
     <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
-        <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+        <img class="rounded-t-lg" src="./images/Laravel_Developer.png" alt="" />
         <div class="p-6">
             <h5 class="mb-2 text-xl font-medium leading-tight">Laravel Developer</h5>
             <p class="mb-4 text-base">
@@ -107,7 +107,7 @@
 
 
     <div class="flex min-w-[300px] flex-col m-2 rounded-lg bg-white dark:bg-gray-700 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
-        <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp" alt="" />
+        <img class="rounded-t-lg" src="./images/graphics-design.jpg" alt="" />
         <div class="p-6">
             <h5 class="mb-2 text-xl font-medium leading-tight">Graphic Design</h5>
             <p class="mb-4 text-base">
