@@ -32,8 +32,8 @@
                 </div>
 
                 <div class="">
-                    <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Hire
-                            Me</x-buttons></a>
+                    <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Hire Me</x-buttons></a>                        
+                    <a href="{{ asset('images/prantoCV.pdf') }}"><x-primary-button class="my-4 justify-center">Download CV</x-buttons></a>
                     <a href="{{ route('skills') }}"><x-primary-button class="my-4 justify-center">Check Works</x-buttons></a>
                 </div>
             </div>
