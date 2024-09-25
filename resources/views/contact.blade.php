@@ -9,7 +9,7 @@
 
                         <h2
                             class="text-dark mb-6 m-3 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
-                            GET IN TOUCH WITH USg
+                            GET IN TOUCH WITH US
                         </h2>
                         <p class="text-body-color m-3 mb-9 text-base leading-relaxed">
                             Please use any of those method to contact me. I am active full time to reply to you

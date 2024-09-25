@@ -10,7 +10,8 @@
                     <h1 class="text-2xl font-harlow px-4"> Pranto Biswas </h1>
                 </div>
                 <div class="name">Full Stack Developer</div>
-                <div class="name">Transforming ideas into stunning digital experiences, from design to development. Let's create something extraordinary together.</div>
+                <div class="name">Transforming ideas into stunning digital experiences, from design to development.
+                    Let's create something extraordinary together.</div>
 
                 <div class="my-4 flex">
                     <div>
@@ -32,9 +33,12 @@
                 </div>
 
                 <div class="">
-                    <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Hire Me</x-buttons></a>                        
-                    <a href="{{ asset('images/prantoCV.pdf') }}"><x-primary-button class="my-4 justify-center">Download CV</x-buttons></a>
-                    <a href="{{ route('skills') }}"><x-primary-button class="my-4 justify-center">Check Works</x-buttons></a>
+                    <a href="mailto:prantobd320@gmail.com"><x-primary-button class="my-4 justify-center">Hire
+                            Me</x-buttons></a>
+                    <a href="{{ asset('images/prantoCV.pdf') }}"><x-primary-button class="my-4 justify-center">Download
+                            CV</x-buttons></a>
+                    <a href="{{ route('skills') }}"><x-primary-button class="my-4 justify-center">Check
+                            Works</x-buttons></a>
                 </div>
             </div>
 
@@ -46,7 +50,7 @@
 
         <div class="md:h-40"></div>
 
-        <section class="text-black dark:text-black">
+        <section class="text-black  dark:text-black">
 
             <div class="flex flex-col md:flex-row">
                 <div
@@ -80,6 +84,80 @@
 
         </section>
 
+        <section class="text-black  dark:text-black">
+
+            <div class="flex flex-col md:flex-row">
+                <div
+                    class="bg-gray-100 dark:bg-gray-800 dark:text-gray-50 p-4 shadow-lg  rounded-lg my-4 md:mx-4 w-full">
+                    <p class="text-2xl">Reviews</p>
+                    <p>Please visit my Fiverr to verify the reviews</p>
+                </div>
+            </div>
+
+
+
+            <div class="grid p-4 grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                            src="{{ asset('images/reviews/review1.png') }}" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review2.png') }}" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review3.png') }}" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review4.png') }}" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review5.png') }}" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review6.png') }}" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review7.png') }}" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review8.png') }}" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review9.png') }}" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review1.png') }}" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review7.png') }}" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                        src="{{ asset('images/reviews/review1.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
     </div>
 </x-app-layout>
-
