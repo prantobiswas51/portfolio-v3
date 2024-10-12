@@ -18,7 +18,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ftp.techland360.com
+          server: /home/pranto-ssh/
           username: pranto-ftp
           password: ${{ secrets.ftp_password }}
           # FEf4455$%$tfefreF
