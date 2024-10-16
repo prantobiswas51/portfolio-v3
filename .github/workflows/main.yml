@@ -18,7 +18,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: /home/pranto-ftp/
+          server: 68.183.179.31
           username: pranto-ftp
           password: ${{ secrets.ftp_password }}
 
@@ -29,7 +29,7 @@ jobs:
           username: pranto-ssh
           host: 68.183.179.31
           password: ${{ secrets.ssh_password }}
-          port: 65002
+          port: 3306
           script: |
             cd /home/pranto/htdocs/pranto.techland360.com/
             php artisan down
