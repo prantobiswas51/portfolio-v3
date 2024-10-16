@@ -21,7 +21,6 @@ jobs:
           server: /home/pranto-ftp/
           username: pranto-ftp
           password: ${{ secrets.ftp_password }}
-          # FEf4455$%$tfefreF
 
       # Only for database, vendor, node_modulesf
       - name: Deploy to production
@@ -32,7 +31,7 @@ jobs:
           password: ${{ secrets.ssh_password }}
           port: 65002
           script: |
-            cd /home/pranto/htdocs/pranto.techland360.com/public/
+            cd /home/pranto/htdocs/pranto.techland360.com/
             php artisan down
             cp .env.example .env
             php artisan key:generate
